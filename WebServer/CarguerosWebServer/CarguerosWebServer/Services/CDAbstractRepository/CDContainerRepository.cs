@@ -7,6 +7,6 @@ namespace CarguerosWebServer.Services
 {
     public abstract class CDContainerRepository
     {
-
+        public abstract CDContainerRepository constructor();
     }
 }

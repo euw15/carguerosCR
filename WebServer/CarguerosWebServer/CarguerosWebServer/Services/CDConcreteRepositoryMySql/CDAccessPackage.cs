@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace CarguerosWebServer.Services.ConcreteRepository
+namespace CarguerosWebServer.Services
 {
     public class CDAccessPackage : CDPackageRepository
     {
-
+        public CDPackageRepository constructor()
+        {
+            return new CDAccessPackage();
+        }
     }
 }

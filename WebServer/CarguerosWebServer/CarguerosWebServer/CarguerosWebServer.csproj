@@ -122,6 +122,11 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\CDBillingController.cs" />
+    <Compile Include="Controllers\CDContainerController.cs" />
+    <Compile Include="Controllers\CDCostumerController.cs" />
+    <Compile Include="Controllers\CDEmployeeController.cs" />
+    <Compile Include="Controllers\CDPackageController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -141,11 +146,12 @@
     <Compile Include="Services\CDAbstractRepository\CDEmployeeRepository.cs" />
     <Compile Include="Services\CDAbstractRepository\CDPackageRepository.cs" />
     <Compile Include="Services\CDAbstractFactory.cs" />
-    <Compile Include="Services\CDConcreteRepository\CDAccessBilling.cs" />
-    <Compile Include="Services\CDConcreteRepository\CDAccessContainer.cs" />
-    <Compile Include="Services\CDConcreteRepository\CDAccessCostumer.cs" />
-    <Compile Include="Services\CDConcreteRepository\CDAccessEmployee.cs" />
-    <Compile Include="Services\CDConcreteRepository\CDAccessPackage.cs" />
+    <Compile Include="Services\CDConcreteFactoryWebServer.cs" />
+    <Compile Include="Services\CDConcreteRepositoryMySql\CDAccessBilling.cs" />
+    <Compile Include="Services\CDConcreteRepositoryMySql\CDAccessContainer.cs" />
+    <Compile Include="Services\CDConcreteRepositoryMySql\CDAccessCostumer.cs" />
+    <Compile Include="Services\CDConcreteRepositoryMySql\CDAccessEmployee.cs" />
+    <Compile Include="Services\CDConcreteRepositoryMySql\CDAccessPackage.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
