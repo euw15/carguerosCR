@@ -123,11 +123,29 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Billing.cs" />
+    <Compile Include="Models\Container.cs" />
+    <Compile Include="Models\ContainerManager.cs" />
+    <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Employee.cs" />
+    <Compile Include="Models\Packages.cs" />
+    <Compile Include="Models\Person.cs" />
+    <Compile Include="Models\Router.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\CDAbstractRepository\CDBillingRepository.cs" />
+    <Compile Include="Services\CDAbstractRepository\CDContainerRepository.cs" />
+    <Compile Include="Services\CDAbstractRepository\CDCostumerRepository.cs" />
+    <Compile Include="Services\CDAbstractRepository\CDEmployeeRepository.cs" />
+    <Compile Include="Services\CDAbstractRepository\CDPackageRepository.cs" />
+    <Compile Include="Services\CDAbstractFactory.cs" />
+    <Compile Include="Services\CDConcreteRepository\CDAccessBilling.cs" />
+    <Compile Include="Services\CDConcreteRepository\CDAccessContainer.cs" />
+    <Compile Include="Services\CDConcreteRepository\CDAccessCostumer.cs" />
+    <Compile Include="Services\CDConcreteRepository\CDAccessEmployee.cs" />
+    <Compile Include="Services\CDConcreteRepository\CDAccessPackage.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
@@ -231,7 +249,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
