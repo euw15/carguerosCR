@@ -16,15 +16,15 @@ namespace CarguerosWebServer.Services
 
         public static CDConcreteFactoryWebServer Instance
         {
-      get 
-      {
-         if (instance == null)
-         {
-             instance = new CDConcreteFactoryWebServer();
-         }
-         return instance;
-      }
-   }
+            get 
+            {
+                if (instance == null)
+                {
+                    instance = new CDConcreteFactoryWebServer();
+                }
+                return instance;
+            }
+        }
 
         //interface methods
         public override CDBillingRepository CreateCDBillingRepository()

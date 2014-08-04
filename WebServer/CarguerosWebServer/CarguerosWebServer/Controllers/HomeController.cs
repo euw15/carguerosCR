@@ -11,20 +11,13 @@ namespace CarguerosWebServer.Controllers
 {
     public class HomeController : Controller
     {
-        private CDConcreteFactoryWebServer factory;
+        
 
         public ActionResult Index()
         {
             return View();
         }
 
-        public void Hola(){
-            CDConcreteFactoryWebServer concrete= CDConcreteFactoryWebServer.Instance;
-            CDContainerRepository container = concrete.CreateContainerRepository();
-            
-            
-
-              
-        }
+        
     }
 }
