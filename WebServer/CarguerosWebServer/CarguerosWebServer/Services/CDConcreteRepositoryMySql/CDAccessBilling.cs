@@ -19,13 +19,10 @@ namespace CarguerosWebServer.Services
 
         public CDAccessBilling()
         {
-            System.Diagnostics.Debug.WriteLine("Holaaaaaa");
+           // System.Diagnostics.Debug.WriteLine("Holaaaaaa");
             showViewBilling();
           
         }
-
-
-
 
         public override void showViewBilling()
         {
@@ -41,7 +38,6 @@ namespace CarguerosWebServer.Services
                 }
             }
         }
-
 
         public override List<Billing> getTableBilling(DataSet dataSet)
         {
@@ -76,7 +72,6 @@ namespace CarguerosWebServer.Services
             {
                 return (Billing[])ctx.Cache[CacheKey];
             }
-
             return new Billing[]
         {
             new Billing
@@ -88,9 +83,6 @@ namespace CarguerosWebServer.Services
                 freight = 0
             }
         };
-        }
-
-
-       
+        }       
     }
 }

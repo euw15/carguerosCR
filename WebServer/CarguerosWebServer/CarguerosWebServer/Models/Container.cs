@@ -7,5 +7,9 @@ namespace CarguerosWebServer.Models
 {
     public class Container
     {
+        public int idContainer { get; set; }
+        
+        public int maxWeight { get; set; }
+        
     }
 }
