@@ -17,12 +17,12 @@ namespace CarguerosWebServer.Controllers
         {
             
             CDConcreteFactoryWebServer factory = CDConcreteFactoryWebServer.Instance;
-            this.containerRepository = factory.CreateCDBillingRepository();
+            this.containerRepository = factory.CreateContainerRepository();
            
            
         }
 
-        public Billing[] Get()
+        public Container[] Get()
         {
             return containerRepository.GetAllContacts();
         }

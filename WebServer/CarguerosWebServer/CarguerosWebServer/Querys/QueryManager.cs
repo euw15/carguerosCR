@@ -26,7 +26,7 @@ namespace CarguerosWebServer.Querys
             return myDataSet;
         }
 
-        //Corregir, bebe retornar tabla billing
+        //Corregir, bebe retornar tabla container
         public DataSet getDataSetTableContainer()
         {
             MySqlConnection myConnection = new MySqlConnection("server=localhost; user id=root; password=dcanessa; database=universidad; pooling=false;");

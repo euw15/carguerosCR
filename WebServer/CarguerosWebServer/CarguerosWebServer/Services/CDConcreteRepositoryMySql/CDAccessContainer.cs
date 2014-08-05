@@ -17,9 +17,7 @@ namespace CarguerosWebServer.Services
 
         public CDAccessContainer()
         {
-             showViewContainer();
-
-          
+             showViewContainer();          
         }
 
 
