@@ -19,13 +19,10 @@ namespace CarguerosWebServer.Services
 
 
         public CDAccessBilling()
-        {
-           // System.Diagnostics.Debug.WriteLine("Holaaaaaa");
-            showViewBilling();
-          
+        {          
         }
 
-        public override void showViewBilling()
+        public override Billing[] showAllBilling()
         {
 
             DataSet dataSet = mySQLConnection.makeQuery("SELECT * FROM universidad.estudiante;"); 
@@ -38,9 +35,10 @@ namespace CarguerosWebServer.Services
                     ctx.Cache[CacheKey] = listBilling.ToArray();                     
                 }
             }
+            return GetBilling();
         }
 
-        public override List<Billing> getTableBilling(DataSet dataSet)
+        public  List<Billing> getTableBilling(DataSet dataSet)
         {
             List<Billing> listBilling = new List<Billing>();
             foreach (DataTable table in dataSet.Tables)
@@ -65,7 +63,7 @@ namespace CarguerosWebServer.Services
             return listBilling;
         }
 
-        public override Billing[] GetAllContacts()
+        public Billing[] GetBilling()
         {
             var ctx = HttpContext.Current;
 

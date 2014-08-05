@@ -23,9 +23,29 @@ namespace CarguerosWebServer.Controllers{
            
         }
 
-        public Billing[] Get()
+        [HttpGet]
+        [ActionName("Pedro")]
+        public Billing[] oscar(String id, String id1,String id2)
         {
-            return billingRepository.GetAllContacts();
+            System.Diagnostics.Debug.WriteLine(id);
+            System.Diagnostics.Debug.WriteLine(id1);
+            System.Diagnostics.Debug.WriteLine(id2);
+            //http://localhost:49495/api/cdbilling/pedro?id=hola&id1=comoestas&id2=webon          
+            return billingRepository.showAllBilling();
+            
+        }
+
+        [HttpPost]
+        [ActionName("Peter")]
+        public Billing[] edward(String id, String id1, String id2)
+        {
+            System.Diagnostics.Debug.WriteLine(id);
+            System.Diagnostics.Debug.WriteLine(id1);
+            System.Diagnostics.Debug.WriteLine(id2);
+            //http://localhost:49495/api/cdbilling/peter?id=hola&id1=comoestas&id2=webon 
+            return billingRepository.showAllBilling();
+           
+
         }
 
     }
