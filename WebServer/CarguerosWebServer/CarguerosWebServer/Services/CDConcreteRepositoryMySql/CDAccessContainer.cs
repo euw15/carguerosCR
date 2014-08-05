@@ -1,7 +1,7 @@
 ﻿using CarguerosWebServer.Models;
 using System.Data;
 using MySql.Data.MySqlClient;
-using CarguerosWebServer.Querys;
+
 
 using System;
 using System.Collections.Generic;
@@ -13,7 +13,7 @@ namespace CarguerosWebServer.Services
     public class CDAccessContainer : CDContainerRepository
     {
         public const string CacheKey = "Container";
-        public QueryManager queryContainer;
+        CDMySQLConnection mySQLConnection = CDMySQLConnection.Instance;
 
         public CDAccessContainer()
         {
@@ -22,9 +22,8 @@ namespace CarguerosWebServer.Services
 
 
         public override void showViewContainer()
-        {
-            this.queryContainer = new QueryManager();
-            DataSet dataSet = queryContainer.getDataSetTableContainer();
+        {           
+            DataSet dataSet = mySQLConnection.makeQuery("SELECT * FROM universidad.estudiante;"); 
             List<Container> listContainer = getTableContainer(dataSet);    
             var ctx = HttpContext.Current;            
             if (ctx != null)

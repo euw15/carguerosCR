@@ -17,8 +17,8 @@ namespace CarguerosWebServer.Controllers{
         public CDBillingController()
         {
             
-           // CDConcreteFactoryWebServer factory = CDConcreteFactoryWebServer.Instance;
-            //this.billingRepository = factory.CreateCDBillingRepository();
+            CDConcreteFactoryWebServer factory = CDConcreteFactoryWebServer.Instance;
+            this.billingRepository = factory.CreateCDBillingRepository();
            
            
         }

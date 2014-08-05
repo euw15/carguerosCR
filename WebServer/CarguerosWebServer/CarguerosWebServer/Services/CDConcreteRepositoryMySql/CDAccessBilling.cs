@@ -1,7 +1,7 @@
 ﻿using CarguerosWebServer.Models;
 using System.Data;
 using MySql.Data.MySqlClient;
-using CarguerosWebServer.Querys;
+
 
 using System;
 using System.Collections.Generic;
@@ -14,7 +14,8 @@ namespace CarguerosWebServer.Services
     public class CDAccessBilling : CDBillingRepository
     {
         public const string CacheKey = "BillingStore";
-        public QueryManager queryBilling;
+        CDMySQLConnection mySQLConnection = CDMySQLConnection.Instance;
+             
 
 
         public CDAccessBilling()
@@ -26,8 +27,8 @@ namespace CarguerosWebServer.Services
 
         public override void showViewBilling()
         {
-            this.queryBilling = new QueryManager();
-            DataSet dataSet = queryBilling.getDataSetTableBilling();
+
+            DataSet dataSet = mySQLConnection.makeQuery("SELECT * FROM universidad.estudiante;"); 
             List<Billing> listBilling = getTableBilling(dataSet);    
             var ctx = HttpContext.Current;            
             if (ctx != null)

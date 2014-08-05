@@ -142,7 +142,6 @@
     <Compile Include="Models\Person.cs" />
     <Compile Include="Models\Router.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Querys\QueryManager.cs" />
     <Compile Include="Services\CDAbstractRepository\CDBillingRepository.cs" />
     <Compile Include="Services\CDAbstractRepository\CDContainerRepository.cs" />
     <Compile Include="Services\CDAbstractRepository\CDCostumerRepository.cs" />
@@ -155,6 +154,7 @@
     <Compile Include="Services\CDConcreteRepositoryMySql\CDAccessCostumer.cs" />
     <Compile Include="Services\CDConcreteRepositoryMySql\CDAccessEmployee.cs" />
     <Compile Include="Services\CDConcreteRepositoryMySql\CDAccessPackage.cs" />
+    <Compile Include="Services\CDMySQLConnection.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
