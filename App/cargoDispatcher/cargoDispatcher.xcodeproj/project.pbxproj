@@ -14,13 +14,13 @@
 		D08720321992ECA400D13BA5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D08720311992ECA400D13BA5 /* main.m */; };
 		D08720361992ECA400D13BA5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D08720351992ECA400D13BA5 /* AppDelegate.m */; };
 		D08720391992ECA400D13BA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D08720371992ECA400D13BA5 /* Main.storyboard */; };
-		D087203C1992ECA400D13BA5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D087203B1992ECA400D13BA5 /* ViewController.m */; };
 		D087203E1992ECA400D13BA5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D087203D1992ECA400D13BA5 /* Images.xcassets */; };
 		D08720451992ECA400D13BA5 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D08720441992ECA400D13BA5 /* XCTest.framework */; };
 		D08720461992ECA400D13BA5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D08720251992ECA400D13BA5 /* Foundation.framework */; };
 		D08720471992ECA400D13BA5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D08720291992ECA400D13BA5 /* UIKit.framework */; };
 		D087204F1992ECA400D13BA5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D087204D1992ECA400D13BA5 /* InfoPlist.strings */; };
 		D08720511992ECA400D13BA5 /* cargoDispatcherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D08720501992ECA400D13BA5 /* cargoDispatcherTests.m */; };
+		D087205C1992EFAE00D13BA5 /* CDLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D087205B1992EFAE00D13BA5 /* CDLoginViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,14 +45,14 @@
 		D08720341992ECA400D13BA5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D08720351992ECA400D13BA5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		D08720381992ECA400D13BA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		D087203A1992ECA400D13BA5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D087203B1992ECA400D13BA5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		D087203D1992ECA400D13BA5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D08720431992ECA400D13BA5 /* cargoDispatcherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cargoDispatcherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D08720441992ECA400D13BA5 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		D087204C1992ECA400D13BA5 /* cargoDispatcherTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "cargoDispatcherTests-Info.plist"; sourceTree = "<group>"; };
 		D087204E1992ECA400D13BA5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D08720501992ECA400D13BA5 /* cargoDispatcherTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = cargoDispatcherTests.m; sourceTree = "<group>"; };
+		D087205A1992EFAE00D13BA5 /* CDLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDLoginViewController.h; sourceTree = "<group>"; };
+		D087205B1992EFAE00D13BA5 /* CDLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDLoginViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,11 +112,10 @@
 		D087202B1992ECA400D13BA5 /* cargoDispatcher */ = {
 			isa = PBXGroup;
 			children = (
+				D087205D1992EFBA00D13BA5 /* ViewControllers */,
 				D08720341992ECA400D13BA5 /* AppDelegate.h */,
 				D08720351992ECA400D13BA5 /* AppDelegate.m */,
 				D08720371992ECA400D13BA5 /* Main.storyboard */,
-				D087203A1992ECA400D13BA5 /* ViewController.h */,
-				D087203B1992ECA400D13BA5 /* ViewController.m */,
 				D087203D1992ECA400D13BA5 /* Images.xcassets */,
 				D087202C1992ECA400D13BA5 /* Supporting Files */,
 			);
@@ -150,6 +149,15 @@
 				D087204D1992ECA400D13BA5 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D087205D1992EFBA00D13BA5 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D087205A1992EFAE00D13BA5 /* CDLoginViewController.h */,
+				D087205B1992EFAE00D13BA5 /* CDLoginViewController.m */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,9 +257,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D087203C1992ECA400D13BA5 /* ViewController.m in Sources */,
 				D08720361992ECA400D13BA5 /* AppDelegate.m in Sources */,
 				D08720321992ECA400D13BA5 /* main.m in Sources */,
+				D087205C1992EFAE00D13BA5 /* CDLoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
