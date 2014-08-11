@@ -7,28 +7,26 @@ using System.Web.Http;
 using CarguerosWebServer.Services;
 using CarguerosWebServer.Models;
 
-namespace CarguerosWebServer.Controllers{
-       
-    public class CDBillingController : ApiController
+namespace CarguerosWebServer.Controllers
+{
+    public class CDCustomerTypeController : ApiController
     {
-       
-        private CDBillingRepository billingRepository;
+        private CDCustomerTypeRepository customerTypeRepository;
 
-        public CDBillingController()
+        public CDCustomerTypeController()
         {
             
             CDConcreteFactoryWebServer factory = CDConcreteFactoryWebServer.Instance;
-            this.billingRepository = factory.CreateCDBillingRepository();
+            this.customerTypeRepository = factory.CreateCDCustomerTypeRepository();
            
            
         }
        
         [HttpGet]
         [ActionName("1")]
-        public Billing[] allBilling()
-        {    
-            return billingRepository.showAllBilling();            
+        public CustomerType[] allCustomerType()
+        {
+            return customerTypeRepository.showAllCustomerType();            
         }      
-
     }
 }

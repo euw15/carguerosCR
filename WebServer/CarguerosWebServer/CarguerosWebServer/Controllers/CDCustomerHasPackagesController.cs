@@ -9,26 +9,24 @@ using CarguerosWebServer.Models;
 
 namespace CarguerosWebServer.Controllers
 {
-    public class CDEmployeeController : ApiController
+    public class CDCustomerHasPackagesController : ApiController
     {
-        private CDEmployeeRepository employeeRepository;
+        private CDCustomerHasPackagesRepository CustomerHasPackagesRepository;
 
-        public CDEmployeeController()
+        public CDCustomerHasPackagesController()
         {
             
             CDConcreteFactoryWebServer factory = CDConcreteFactoryWebServer.Instance;
-            this.employeeRepository = factory.CreateCDEmployeeRepository();
+            this.CustomerHasPackagesRepository = factory.CreateCDCustomerHasPackagesRepository();
            
            
         }
        
         [HttpGet]
         [ActionName("1")]
-        public Employee[] allEmployee()
-        {    
-            return employeeRepository.showAllEmployee();            
-        }      
-
-
+        public CustomerHasPackages[] allCustomerHasPackages()
+        {
+            return CustomerHasPackagesRepository.showAllCustomerHasPackages();            
+        }     
     }
 }

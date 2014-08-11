@@ -6,70 +6,72 @@ using CarguerosWebServer.Models;
 using System.Data;
 using MySql.Data.MySqlClient;
 
-
 namespace CarguerosWebServer.Services
 {
-    public class CDAccessEmployee : CDEmployeeRepository
+    public class CDAcessRole : CDRoleRepository
     {
-         public const string CacheKey = "EmployeeStore";
+         public const string CacheKey = "RoleStore";
         CDMySQLConnection mySQLConnection = CDMySQLConnection.Instance;
 
-        public CDAccessEmployee()
+        public CDAcessRole()
         {    
       
         }
 
-        public override Employee[] showAllEmployee()
+        public override Role[] showAllRole()
         {
             DataSet dataSet = mySQLConnection.makeQuery("SELECT * FROM universidad.estudiante;"); 
-            List<Employee> listEmployee = getTableEmployee(dataSet);    
+            List<Role> listRole = getTableRole(dataSet);    
             var ctx = HttpContext.Current;            
             if (ctx != null)
             {
                 if (ctx.Cache[CacheKey] == null)
                 {
-                    ctx.Cache[CacheKey] = listEmployee.ToArray();                     
+                    ctx.Cache[CacheKey] = listRole.ToArray();                     
                 }
             }
-            return GetEmployee();
+            return GetRole();
         }
 
 
 
-        public  List<Employee> getTableEmployee(DataSet dataSet)
+        public  List<Role> getTableRole(DataSet dataSet)
         {
-            List<Employee> listEmployee = new List<Employee>();
+            List<Role> listRole = new List<Role>();
             foreach (DataTable table in dataSet.Tables)
             {
                 foreach (DataRow row in table.Rows)
                 {
-             
-                    int personIdPerson = Convert.ToInt32(row[0]);                                      
-                    listEmployee.Add(new Employee{
-                        personIdPerson = personIdPerson                      
+                    int employeePersonIdPerson = Convert.ToInt32(row[0]);
+                    String type = row[1].ToString();
+                                 
+                    listRole.Add(new Role{
+                        employeePersonIdPerson = employeePersonIdPerson,
+                        type = type
+                       
                     }
                     );
                 }
             }
-            return listEmployee;
+            return listRole;
         }
 
-        public Employee[] GetEmployee()
+        public Role[] GetRole()
         {
             var ctx = HttpContext.Current;
 
             if (ctx != null)
             {
-                return (Employee[])ctx.Cache[CacheKey];
+                return (Role[])ctx.Cache[CacheKey];
             }
-            return new Employee[]
+            return new Role[]
         {
-            new Employee
+            new Role
             {
-                 personIdPerson = 0     
+                 employeePersonIdPerson = 0,
+                 type = ""
             }
         };
         }       
-        
     }
 }

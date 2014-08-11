@@ -7,5 +7,7 @@ namespace CarguerosWebServer.Models
 {
     public class Employee
     {
+        public int personIdPerson { get; set; }
+       
     }
 }

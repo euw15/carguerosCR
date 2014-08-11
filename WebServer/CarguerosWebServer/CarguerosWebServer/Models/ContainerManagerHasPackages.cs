@@ -5,11 +5,9 @@ using System.Web;
 
 namespace CarguerosWebServer.Models
 {
-    public class Container
+    public class ContainerManagerHasPackages
     {
-        public int idContainer { get; set; }
-        
-        public int maxWeight { get; set; }
-        
+        public int idContainerManagerP { get; set; }
+        public int idPackagesP { get; set; }
     }
 }

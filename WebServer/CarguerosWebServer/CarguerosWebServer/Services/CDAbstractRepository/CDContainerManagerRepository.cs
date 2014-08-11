@@ -6,9 +6,8 @@ using CarguerosWebServer.Models;
 
 namespace CarguerosWebServer.Services
 {
-    public abstract class CDEmployeeRepository
+    public abstract class CDContainerManagerRepository
     {
-        public abstract Employee[] showAllEmployee();
-
+        public abstract ContainerManager[] showAllContainerManager();
     }
 }

@@ -10,18 +10,18 @@ namespace CarguerosWebServer.Services
 {
     public class CDAccessContainer : CDContainerRepository
     {
-        public const string CacheKey = "Container";
+        public const string CacheKey = "ContainerStore";
         CDMySQLConnection mySQLConnection = CDMySQLConnection.Instance;
 
         public CDAccessContainer()
         {
-             showViewContainer();          
+                  
         }
 
 
-        public override void showViewContainer()
-        {           
-            DataSet dataSet = mySQLConnection.makeQuery("SELECT * FROM universidad.estudiante;"); 
+        public override Container[] showAllContainer()
+        {
+            DataSet dataSet = mySQLConnection.makeQuery("SELECT * FROM universidad.estudiante;");  
             List<Container> listContainer = getTableContainer(dataSet);    
             var ctx = HttpContext.Current;            
             if (ctx != null)
@@ -31,9 +31,10 @@ namespace CarguerosWebServer.Services
                     ctx.Cache[CacheKey] = listContainer.ToArray();                     
                 }
             }
+            return GetContainer();
         }
 
-        public override List<Container> getTableContainer(DataSet dataSet)
+        public  List<Container> getTableContainer(DataSet dataSet)
         {
             List<Container> listContainer = new List<Container>();
             foreach (DataTable table in dataSet.Tables)
@@ -52,7 +53,7 @@ namespace CarguerosWebServer.Services
             return listContainer;
         }
 
-        public override Container[] GetAllContacts()
+        public Container[] GetContainer()
         {
             var ctx = HttpContext.Current;
 

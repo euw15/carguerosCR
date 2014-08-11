@@ -9,8 +9,10 @@ namespace CarguerosWebServer.Models
     {
         public int idContainerManager { get; set; }
         public int containerIdContainer { get; set; }
-        public bool available { get; set; }
+        public String available { get; set; }
         public String arrivalDate { get; set; }
-        public int maxWeight { get; set; }
+        public String departureDate { get; set; }
+        public int actualWeight { get; set; }
+        public int routeIdRoute { get; set; }
     }
 }

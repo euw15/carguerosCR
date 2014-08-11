@@ -14,17 +14,17 @@ namespace CarguerosWebServer.Controllers
         private CDContainerRepository containerRepository;
 
         public CDContainerController()
-        {
-            
+        {            
             CDConcreteFactoryWebServer factory = CDConcreteFactoryWebServer.Instance;
-            this.containerRepository = factory.CreateContainerRepository();
-           
-           
+            this.containerRepository = factory.CreateCDContainerRepository();
+                   
         }
 
-        public Container[] Get()
+        [HttpGet]
+        [ActionName("1")]
+        public Container[] allContainer()
         {
-            return containerRepository.GetAllContacts();
+            return containerRepository.showAllContainer();
         }
 
 

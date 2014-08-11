@@ -5,11 +5,9 @@ using System.Web;
 
 namespace CarguerosWebServer.Models
 {
-    public class Container
+    public class Role
     {
-        public int idContainer { get; set; }
-        
-        public int maxWeight { get; set; }
-        
+        public int employeePersonIdPerson { get; set; }
+        public String type { get; set; }
     }
 }

@@ -13,16 +13,14 @@ namespace CarguerosWebServer.Services
     {
         public const string CacheKey = "BillingStore";
         CDMySQLConnection mySQLConnection = CDMySQLConnection.Instance;
-             
-
 
         public CDAccessBilling()
-        {          
+        {    
+      
         }
 
         public override Billing[] showAllBilling()
         {
-
             DataSet dataSet = mySQLConnection.makeQuery("SELECT * FROM universidad.estudiante;"); 
             List<Billing> listBilling = getTableBilling(dataSet);    
             var ctx = HttpContext.Current;            
@@ -35,6 +33,8 @@ namespace CarguerosWebServer.Services
             }
             return GetBilling();
         }
+
+
 
         public  List<Billing> getTableBilling(DataSet dataSet)
         {

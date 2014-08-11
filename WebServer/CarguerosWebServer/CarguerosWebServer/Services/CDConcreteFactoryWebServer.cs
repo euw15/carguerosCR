@@ -32,25 +32,62 @@ namespace CarguerosWebServer.Services
             return new CDAccessBilling();
         }
 
-        public override CDPackageRepository CreatePackageRepository()
+        public override CDPackagesRepository CreateCDPackagesRepository()
         {
-            return new CDAccessPackage();
+            return new CDAccessPackages();
         }
 
-        public override CDContainerRepository CreateContainerRepository()
+        public override CDContainerRepository CreateCDContainerRepository()
         {
             return new CDAccessContainer();
         }
 
-        public override CDEmployeeRepository CreateEmployeeRepository()
+        public override CDEmployeeRepository CreateCDEmployeeRepository()
         {
             return new CDAccessEmployee();
         }
 
-        public override CDCostumerRepository CreateCustomerRepository()
+        public override CDCustomerRepository CreateCDCustomerRepository()
         {
-            return new CDAccessCostumer();
+            return new CDAccessCustomer();
         }
+        public override CDContainerManagerRepository CreateCDContainerManagerRepository()
+        {
+            return new CDAcessContainerManager();
+        }
+        public override CDContainerManagerHasPackagesRepository CreateCDContainerManagerHasPackagesRepository()
+        {
+            return new CDAcessContainerManagerHasPackages();
+        }
+        public override CDCustomerHasPackagesRepository CreateCDCustomerHasPackagesRepository()
+        {
+            return new CDAcessCustomerHasPackages();
+        }
+        public override CDCustomerTypeRepository CreateCDCustomerTypeRepository()
+        {
+            return new CDAcessCustomerType();
+        }      
+        public override CDPersonRepository CreateCDPersonRepository()
+        {
+            return new CDAcessPerson();
+        }
+        public override CDRoleRepository CreateCDRoleRepository()
+        {
+            return new CDAcessRole();
+        }
+        public override CDRouteRepository CreateCDRouteRepository()
+        {
+            return new CDAcessRoute();
+        }
+        public override CDStorageRepository CreateCDStorageRepository()
+        {
+            return new CDAcessStorage();
+        }
+
+
+    
+
+        
 
     }
 }

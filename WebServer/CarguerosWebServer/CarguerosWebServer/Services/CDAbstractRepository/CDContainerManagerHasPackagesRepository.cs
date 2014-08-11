@@ -6,8 +6,8 @@ using System.Web;
 
 namespace CarguerosWebServer.Services
 {
-    public abstract class CDBillingRepository
-    { 
-        public abstract Billing[] showAllBilling();
+    public abstract class CDContainerManagerHasPackagesRepository
+    {
+        public abstract ContainerManagerHasPackages[] showAllContainerManagerHasPackages();
     }
 }

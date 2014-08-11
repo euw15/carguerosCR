@@ -7,13 +7,14 @@ namespace CarguerosWebServer.Models
 {
     public class Customer
     {
-        public string name { get; set; }
-
-        public string last_name { get; set; }
-
-        public string telephone { get; set; }
-
         public int account { get; set; }
 
+        public int personIdPerson { get; set; }
+
+        public int score { get; set; }
+
+        public int type { get; set; }
+
     }
+
 }

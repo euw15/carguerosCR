@@ -9,23 +9,24 @@ using CarguerosWebServer.Models;
 
 namespace CarguerosWebServer.Controllers
 {
-    public class CDCostumerController : ApiController
+    public class CDRouteController : ApiController
     {
-        private CDCostumerRepository costumerRepository;
+        private CDRouteRepository routeRepository;
 
-        public CDCostumerController()
+        public CDRouteController()
         {
+            
             CDConcreteFactoryWebServer factory = CDConcreteFactoryWebServer.Instance;
-            this.costumerRepository = factory.CreateCustomerRepository();
+            this.routeRepository = factory.CreateCDRouteRepository();
+           
+           
         }
-
        
         [HttpGet]
-        [ActionName("getCustomer")]
-        public Customer edward(string id)
-        {
-            return costumerRepository.getCostumer(id);
-        }
-
+        [ActionName("1")]
+        public Route[] allRoute()
+        {    
+            return routeRepository.showAllRoute();            
+        }      
     }
 }
