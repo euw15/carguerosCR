@@ -21,7 +21,6 @@
 		D087204F1992ECA400D13BA5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D087204D1992ECA400D13BA5 /* InfoPlist.strings */; };
 		D08720511992ECA400D13BA5 /* cargoDispatcherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D08720501992ECA400D13BA5 /* cargoDispatcherTests.m */; };
 		D087205C1992EFAE00D13BA5 /* CDLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D087205B1992EFAE00D13BA5 /* CDLoginViewController.m */; };
-		D08720611992F2C700D13BA5 /* CDPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = D08720601992F2C700D13BA5 /* CDPerson.m */; };
 		D08720641992F2E700D13BA5 /* CDEmployee.m in Sources */ = {isa = PBXBuildFile; fileRef = D08720631992F2E700D13BA5 /* CDEmployee.m */; };
 		D08720671992F30E00D13BA5 /* CDCustomer.m in Sources */ = {isa = PBXBuildFile; fileRef = D08720661992F30E00D13BA5 /* CDCustomer.m */; };
 		D087206A1992F36700D13BA5 /* CDBilling.m in Sources */ = {isa = PBXBuildFile; fileRef = D08720691992F36700D13BA5 /* CDBilling.m */; };
@@ -29,7 +28,11 @@
 		D08720701992F3EE00D13BA5 /* CDContainerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D087206F1992F3EE00D13BA5 /* CDContainerManager.m */; };
 		D08720731992F42A00D13BA5 /* CDContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = D08720721992F42A00D13BA5 /* CDContainer.m */; };
 		D08720761992F44500D13BA5 /* CDRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = D08720751992F44500D13BA5 /* CDRoute.m */; };
-		D087207A1992F56800D13BA5 /* CDAccesoEmployee.m in Sources */ = {isa = PBXBuildFile; fileRef = D08720791992F56800D13BA5 /* CDAccesoEmployee.m */; };
+		D087207A1992F56800D13BA5 /* CDAccessCustomer.m in Sources */ = {isa = PBXBuildFile; fileRef = D08720791992F56800D13BA5 /* CDAccessCustomer.m */; };
+		D0B7FE2319A157B900C5CF0A /* CDPerfilViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0B7FE2219A157B900C5CF0A /* CDPerfilViewController.m */; };
+		D0B7FE2619A177BA00C5CF0A /* CDAccessPackages.m in Sources */ = {isa = PBXBuildFile; fileRef = D0B7FE2519A177BA00C5CF0A /* CDAccessPackages.m */; };
+		D0B7FE3119A1808000C5CF0A /* CDPackagesListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0B7FE3019A1808000C5CF0A /* CDPackagesListViewController.m */; };
+		D0FFFBE319A00962004AC914 /* PeticionesApi.m in Sources */ = {isa = PBXBuildFile; fileRef = D0FFFBE219A00962004AC914 /* PeticionesApi.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,8 +65,6 @@
 		D08720501992ECA400D13BA5 /* cargoDispatcherTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = cargoDispatcherTests.m; sourceTree = "<group>"; };
 		D087205A1992EFAE00D13BA5 /* CDLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDLoginViewController.h; sourceTree = "<group>"; };
 		D087205B1992EFAE00D13BA5 /* CDLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDLoginViewController.m; sourceTree = "<group>"; };
-		D087205F1992F2C700D13BA5 /* CDPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDPerson.h; sourceTree = "<group>"; };
-		D08720601992F2C700D13BA5 /* CDPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDPerson.m; sourceTree = "<group>"; };
 		D08720621992F2E700D13BA5 /* CDEmployee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDEmployee.h; sourceTree = "<group>"; };
 		D08720631992F2E700D13BA5 /* CDEmployee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDEmployee.m; sourceTree = "<group>"; };
 		D08720651992F30E00D13BA5 /* CDCustomer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDCustomer.h; sourceTree = "<group>"; };
@@ -78,8 +79,16 @@
 		D08720721992F42A00D13BA5 /* CDContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDContainer.m; sourceTree = "<group>"; };
 		D08720741992F44500D13BA5 /* CDRoute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDRoute.h; sourceTree = "<group>"; };
 		D08720751992F44500D13BA5 /* CDRoute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDRoute.m; sourceTree = "<group>"; };
-		D08720781992F56800D13BA5 /* CDAccesoEmployee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDAccesoEmployee.h; sourceTree = "<group>"; };
-		D08720791992F56800D13BA5 /* CDAccesoEmployee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDAccesoEmployee.m; sourceTree = "<group>"; };
+		D08720781992F56800D13BA5 /* CDAccessCustomer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDAccessCustomer.h; sourceTree = "<group>"; };
+		D08720791992F56800D13BA5 /* CDAccessCustomer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDAccessCustomer.m; sourceTree = "<group>"; };
+		D0B7FE2119A157B900C5CF0A /* CDPerfilViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDPerfilViewController.h; sourceTree = "<group>"; };
+		D0B7FE2219A157B900C5CF0A /* CDPerfilViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDPerfilViewController.m; sourceTree = "<group>"; };
+		D0B7FE2419A177BA00C5CF0A /* CDAccessPackages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDAccessPackages.h; sourceTree = "<group>"; };
+		D0B7FE2519A177BA00C5CF0A /* CDAccessPackages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDAccessPackages.m; sourceTree = "<group>"; };
+		D0B7FE2F19A1808000C5CF0A /* CDPackagesListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDPackagesListViewController.h; sourceTree = "<group>"; };
+		D0B7FE3019A1808000C5CF0A /* CDPackagesListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDPackagesListViewController.m; sourceTree = "<group>"; };
+		D0FFFBE119A00962004AC914 /* PeticionesApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeticionesApi.h; sourceTree = "<group>"; };
+		D0FFFBE219A00962004AC914 /* PeticionesApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeticionesApi.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +167,8 @@
 				D087202E1992ECA400D13BA5 /* InfoPlist.strings */,
 				D08720311992ECA400D13BA5 /* main.m */,
 				D08720331992ECA400D13BA5 /* cargoDispatcher-Prefix.pch */,
+				D0FFFBE119A00962004AC914 /* PeticionesApi.h */,
+				D0FFFBE219A00962004AC914 /* PeticionesApi.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -185,6 +196,10 @@
 			children = (
 				D087205A1992EFAE00D13BA5 /* CDLoginViewController.h */,
 				D087205B1992EFAE00D13BA5 /* CDLoginViewController.m */,
+				D0B7FE2119A157B900C5CF0A /* CDPerfilViewController.h */,
+				D0B7FE2219A157B900C5CF0A /* CDPerfilViewController.m */,
+				D0B7FE2F19A1808000C5CF0A /* CDPackagesListViewController.h */,
+				D0B7FE3019A1808000C5CF0A /* CDPackagesListViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -192,8 +207,6 @@
 		D087205E1992F27900D13BA5 /* Datos */ = {
 			isa = PBXGroup;
 			children = (
-				D087205F1992F2C700D13BA5 /* CDPerson.h */,
-				D08720601992F2C700D13BA5 /* CDPerson.m */,
 				D08720621992F2E700D13BA5 /* CDEmployee.h */,
 				D08720631992F2E700D13BA5 /* CDEmployee.m */,
 				D08720651992F30E00D13BA5 /* CDCustomer.h */,
@@ -215,8 +228,10 @@
 		D08720771992F4A600D13BA5 /* AccesosWebServer */ = {
 			isa = PBXGroup;
 			children = (
-				D08720781992F56800D13BA5 /* CDAccesoEmployee.h */,
-				D08720791992F56800D13BA5 /* CDAccesoEmployee.m */,
+				D08720781992F56800D13BA5 /* CDAccessCustomer.h */,
+				D08720791992F56800D13BA5 /* CDAccessCustomer.m */,
+				D0B7FE2419A177BA00C5CF0A /* CDAccessPackages.h */,
+				D0B7FE2519A177BA00C5CF0A /* CDAccessPackages.m */,
 			);
 			name = AccesosWebServer;
 			sourceTree = "<group>";
@@ -318,18 +333,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0B7FE2319A157B900C5CF0A /* CDPerfilViewController.m in Sources */,
 				D087206A1992F36700D13BA5 /* CDBilling.m in Sources */,
 				D087206D1992F3AC00D13BA5 /* CDPackage.m in Sources */,
-				D087207A1992F56800D13BA5 /* CDAccesoEmployee.m in Sources */,
+				D0B7FE2619A177BA00C5CF0A /* CDAccessPackages.m in Sources */,
+				D087207A1992F56800D13BA5 /* CDAccessCustomer.m in Sources */,
+				D0B7FE3119A1808000C5CF0A /* CDPackagesListViewController.m in Sources */,
 				D08720641992F2E700D13BA5 /* CDEmployee.m in Sources */,
 				D08720701992F3EE00D13BA5 /* CDContainerManager.m in Sources */,
 				D08720361992ECA400D13BA5 /* AppDelegate.m in Sources */,
 				D08720761992F44500D13BA5 /* CDRoute.m in Sources */,
 				D08720321992ECA400D13BA5 /* main.m in Sources */,
 				D08720731992F42A00D13BA5 /* CDContainer.m in Sources */,
+				D0FFFBE319A00962004AC914 /* PeticionesApi.m in Sources */,
 				D087205C1992EFAE00D13BA5 /* CDLoginViewController.m in Sources */,
 				D08720671992F30E00D13BA5 /* CDCustomer.m in Sources */,
-				D08720611992F2C700D13BA5 /* CDPerson.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -534,6 +552,7 @@
 				D08720561992ECA400D13BA5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D08720571992ECA400D13BA5 /* Build configuration list for PBXNativeTarget "cargoDispatcherTests" */ = {
 			isa = XCConfigurationList;
@@ -542,6 +561,7 @@
 				D08720591992ECA400D13BA5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

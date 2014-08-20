@@ -10,4 +10,35 @@
 
 @implementation CDCustomer
 
+
+-(CDCustomer *)createCustomer:(NSData *)customerData
+{
+    CDCustomer *customer= [[CDCustomer alloc] init];
+    
+    NSError *error = nil;
+    NSArray *jsonArray = [NSJSONSerialization JSONObjectWithData:customerData options:kNilOptions error:&error];
+    
+    if (error != nil)
+    {
+        NSLog(@"Error parsing JSON.");
+    }
+    else
+    {
+        for (id object in jsonArray)
+    {
+        if(object!=nil)
+        {
+            customer.name      = [object objectForKey:@"name"];
+            customer.lastName  = [object objectForKey:@"lastName"];
+            customer.account   = [[object objectForKey:@"account"] intValue];
+            customer.score     = [[object objectForKey:@"score"] intValue];
+            customer.type      = [object objectForKey:@"type"];
+            customer.telephone = [object objectForKey:@"telephone"];
+        }
+        
+    }
+    }
+    return customer;
+}
+
 @end

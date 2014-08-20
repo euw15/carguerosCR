@@ -10,4 +10,17 @@
 
 @interface CDPackage : NSObject
 
+@property (nonatomic, strong) NSString * idPackages;
+@property                     int        weight;
+@property                     int        size;
+@property                     int        price;
+@property (nonatomic, strong) NSString * type;
+@property (nonatomic, strong) NSString * description;
+@property                     int        customerId;
+@property (nonatomic, strong) NSString * packageState;
+@property (nonatomic, strong) NSString * containerArrivalDate;
+@property (nonatomic, strong) NSString * container;
+
++(NSArray *)createPackageList:(NSData *)packageData;
+
 @end

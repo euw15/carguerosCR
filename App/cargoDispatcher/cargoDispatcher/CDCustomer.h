@@ -10,4 +10,16 @@
 
 @interface CDCustomer : NSObject
 
+
+@property (nonatomic, strong) NSString * name;
+@property                   int  account;
+@property                   int score;
+@property (nonatomic, strong) NSString *telephone;
+@property (nonatomic, strong) NSString *lastName;
+@property (nonatomic, strong) NSString *type;
+
+-(CDCustomer *)createCustomer:(NSData *)customerData;
+
+
 @end
+
