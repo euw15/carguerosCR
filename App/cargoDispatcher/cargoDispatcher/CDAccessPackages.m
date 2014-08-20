@@ -30,7 +30,7 @@
 
 -(void)getPackagesList:(NSString *)idUsuario{
     //Generates URL. Check ENVIRONMENT of EnvConfig in appdelegate.
-    NSURL *apiURL = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"http://cargodispatcher.elasticbeanstalk.com/api/cdpackages/2?account=%@",idUsuario]];
+    NSURL *apiURL = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"http://cargodispatcher.elasticbeanstalk.com/api/cdpackages/UserPackages?account=%@",idUsuario]];
     
     //Adds jSON Body
 	NSURLRequest *request = [PeticionesApi createAPIGetRequest:apiURL];
@@ -45,7 +45,7 @@
                                else {
                                    
                                    self.packagesList= [CDPackage createPackageList:data];
-                                   [self.accessPackageDelegate customerFetched:<#(CDPackage *)#>]
+                                   [self.accessPackageDelegate packageFetched:self.packagesList];
                                }
                            }];
 

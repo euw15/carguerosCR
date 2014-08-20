@@ -12,7 +12,7 @@
 
 
 @protocol AccessPackageDelegate
--(void)packageFetched:(CDPackage *)CDPackage;
+-(void)packageFetched:(NSArray *)NSArrayPackage;
 @end
 
 @interface CDAccessPackages : NSObject

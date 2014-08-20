@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D056D24719A54A27000BE74C /* CDDetalleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D056D24619A54A27000BE74C /* CDDetalleViewController.m */; };
 		D08720261992ECA400D13BA5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D08720251992ECA400D13BA5 /* Foundation.framework */; };
 		D08720281992ECA400D13BA5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D08720271992ECA400D13BA5 /* CoreGraphics.framework */; };
 		D087202A1992ECA400D13BA5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D08720291992ECA400D13BA5 /* UIKit.framework */; };
@@ -46,6 +47,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D056D24519A54A27000BE74C /* CDDetalleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDDetalleViewController.h; sourceTree = "<group>"; };
+		D056D24619A54A27000BE74C /* CDDetalleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDDetalleViewController.m; sourceTree = "<group>"; };
 		D08720221992ECA400D13BA5 /* cargoDispatcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cargoDispatcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D08720251992ECA400D13BA5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D08720271992ECA400D13BA5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -200,6 +203,8 @@
 				D0B7FE2219A157B900C5CF0A /* CDPerfilViewController.m */,
 				D0B7FE2F19A1808000C5CF0A /* CDPackagesListViewController.h */,
 				D0B7FE3019A1808000C5CF0A /* CDPackagesListViewController.m */,
+				D056D24519A54A27000BE74C /* CDDetalleViewController.h */,
+				D056D24619A54A27000BE74C /* CDDetalleViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -338,6 +343,7 @@
 				D087206D1992F3AC00D13BA5 /* CDPackage.m in Sources */,
 				D0B7FE2619A177BA00C5CF0A /* CDAccessPackages.m in Sources */,
 				D087207A1992F56800D13BA5 /* CDAccessCustomer.m in Sources */,
+				D056D24719A54A27000BE74C /* CDDetalleViewController.m in Sources */,
 				D0B7FE3119A1808000C5CF0A /* CDPackagesListViewController.m in Sources */,
 				D08720641992F2E700D13BA5 /* CDEmployee.m in Sources */,
 				D08720701992F3EE00D13BA5 /* CDContainerManager.m in Sources */,

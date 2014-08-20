@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "CDAccessPackages.h"
+#import "CDDetalleViewController.h"
 
-@interface CDPackagesListViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface CDPackagesListViewController : UIViewController <UITableViewDataSource, UITableViewDelegate,AccessPackageDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *listTableView;
 

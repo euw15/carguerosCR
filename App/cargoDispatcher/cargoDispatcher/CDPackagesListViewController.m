@@ -10,9 +10,13 @@
 
 @interface CDPackagesListViewController ()
 
+@property CDAccessPackages *accessPackages;
+
 @end
 
 @implementation CDPackagesListViewController
+
+@synthesize accessPackages;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -25,12 +29,13 @@
 
 - (void)viewDidLoad
 {
-
+    //configuracion delegates y protocols
     self.listTableView.dataSource=self;
     self.listTableView.delegate=self;
-    CDAccessPackages *accessPackages= [CDAccessPackages sharedManager];
+    accessPackages= [CDAccessPackages sharedManager];
+    accessPackages.accessPackageDelegate=self;
     [accessPackages  getPackagesList:@"1"];
-    self.packagesList= accessPackages.packagesList;
+    
     
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -49,19 +54,12 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    NSLog(@"aca hay %i", [self.packagesList count]);
     return [self.packagesList count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    /*
-     *   This is an important bit, it asks the table view if it has any available cells
-     *   already created which it is not using (if they are offscreen), so that it can
-     *   reuse them (saving the time of alloc/init/load from xib a new cell ).
-     *   The identifier is there to differentiate between different types of cells
-     *   (you can display different types of cells in the same table view)
-     */
+ 
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MyIdentifier"];
     
@@ -79,21 +77,46 @@
         
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         
+        
+        
+        CDPackage *actualPackage= [self.packagesList objectAtIndex:indexPath.item];
+        
+        cell.textLabel.text = actualPackage.description;
     }
     
     return cell;
 }
 
-/*
+//delegate method
+-(void)packageFetched:(NSArray *)NSArrayPackage
+{
+    self.packagesList= NSArrayPackage;
+    [self.listTableView reloadData];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self performSegueWithIdentifier:@"packageDetails" sender:[self.packagesList objectAtIndex:indexPath.item]];
+}
+
+
  
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([[segue identifier] isEqualToString:@"packageDetails"])
+    {
+        // Get reference to the destination view controller
+        CDDetalleViewController *detallePackageViewController = [segue destinationViewController];
+        CDPackage *package  = (CDPackage *)sender;
+        
+        detallePackageViewController.package= package;
+        
+        
+        
+    }
 }
-*/
+
 
 @end
