@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login Employee</title>
+ 
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script> 
+    <script src="http://malsup.github.com/jquery.form.js"></script> 
+
+</head>
+
+<body>
+    <div class="well well-sm" style="width: 500px; margin: 200px auto 0 auto;">
+        <form class="form-horizontal" action="loginEmployeeWeb.php" method="POST">
+            <fieldset>
+
+                <!-- Form Name -->
+                <legend>Please Sign In</legend>
+
+                <!-- Text input-->
+                <div class="form-group">
+                  <label class="col-md-4 control-label" for="idEmployee">Identification</label>  
+                  <div class="col-md-6">
+                     <input id="idEmployee" name="idEmployee" type="number" placeholder="" class="form-control input-md" required="">                  
+                  </div>
+                </div>
+
+                <!-- Password input-->
+                <div class="form-group">
+                  <label class="col-md-4 control-label" for="idPassword">Password</label>
+                  <div class="col-md-6">
+                    <input id="idPassword" name="idPassword" type="password" placeholder="" class="form-control input-md" required=""> 
+                  </div>
+                </div>
+
+                <!-- Form actions -->
+                 <div class="modal-footer form-group">          
+                     <button type="submit" class="btn btn-primary">Login</button>
+                </div>
+
+            </fieldset>
+        </form>
+    </div>
+    
+      <!-- set up the modal to start hidden and fade in and out -->
+  <div id="myError" class="modal fade">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+
+       <!-- dialog body -->
+       <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4>Username or password wrong!</h4>
+       </div>
+
+       <!-- dialog buttons -->
+       <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+       </div>
+
+      </div>
+    </div>
+  </div>
+
+
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.dropdown.js"></script>
+
+</body>
+
+</html>

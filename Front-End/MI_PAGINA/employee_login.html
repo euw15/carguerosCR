@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Plantilla básica de Bootstrap</title>
+ 
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script> 
+    <script src="http://malsup.github.com/jquery.form.js"></script> 
+
+</head>
+
+<body>
+    <div class="well well-sm" style="width: 500px; margin: 200px auto 0 auto;">
+        <form class="form-horizontal">
+            <fieldset>
+
+                <!-- Form Name -->
+                <legend>Please Sign In</legend>
+
+                <!-- Text input-->
+                <div class="form-group">
+                  <label class="col-md-4 control-label" for="idEmployee">Identification</label>  
+                  <div class="col-md-6">
+                     <input id="idEmployee" name="idEmployee" type="text" placeholder="" class="form-control input-md" required="">                  
+                  </div>
+                </div>
+
+                <!-- Password input-->
+                <div class="form-group">
+                  <label class="col-md-4 control-label" for="idPassword">Password</label>
+                  <div class="col-md-6">
+                    <input id="idPassword" name="idPassword" type="password" placeholder="" class="form-control input-md" required=""> 
+                  </div>
+                </div>
+
+                <!-- Form actions -->
+                 <div class="modal-footer form-group">          
+                     <button type="submit" class="btn btn-primary">Login</button>
+                </div>
+
+            </fieldset>
+        </form>
+    </div>
+
+
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.dropdown.js"></script>
+
+</body>
+
+</html>
