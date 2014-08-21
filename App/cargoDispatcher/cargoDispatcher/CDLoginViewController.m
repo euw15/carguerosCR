@@ -58,6 +58,7 @@
 }
 
 -(void)configureKeywords{
+    self.contrasenaTextField.secureTextEntry=YES;
     [self.contrasenaTextField setDelegate:self];
     [self.contrasenaTextField setReturnKeyType:UIReturnKeyDone];
     [self.contrasenaTextField addTarget:self

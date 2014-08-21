@@ -14,8 +14,11 @@
 
 @property (strong) CDEmployee * employee;
 
+@property NSTimer *timerMethod;
+
 @property (strong, nonatomic) IBOutlet UILabel *labelRol;
 @property (strong, nonatomic) IBOutlet UILabel *labelTelefono;
 @property (strong, nonatomic) IBOutlet UILabel *labelNombre;
 
+- (IBAction)cerrarSeccion:(id)sender;
 @end

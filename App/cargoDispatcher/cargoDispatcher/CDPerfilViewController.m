@@ -53,4 +53,12 @@
 }
 */
 
+- (IBAction)cerrarSeccion:(id)sender {
+    //cierra la secci'on
+    CDAccessCustomer * accessCustomer= [CDAccessCustomer sharedManager];
+    accessCustomer.customer=nil;
+    
+    
+    [self performSegueWithIdentifier:@"cerrarSeccion" sender:nil];
+}
 @end

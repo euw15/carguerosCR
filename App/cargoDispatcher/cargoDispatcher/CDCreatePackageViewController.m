@@ -85,4 +85,13 @@
     [accessPackages createPackage:package idUsuario:[textFieldCuentaCliente.text intValue]];
     
 }
+
+//implement this UITextFiledDelegate Protocol method in the same class
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+    if ([textField.text length] > 100)
+        return NO;
+    else
+        return YES;
+}
+
 @end

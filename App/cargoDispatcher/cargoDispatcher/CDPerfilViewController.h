@@ -21,6 +21,7 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
 
+- (IBAction)cerrarSeccion:(id)sender;
 
 
 @end

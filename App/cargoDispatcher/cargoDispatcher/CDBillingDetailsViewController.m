@@ -1,20 +1,18 @@
 //
-//  CDDetalleViewController.m
+//  CDBillingDetailsViewController.m
 //  cargoDispatcher
 //
-//  Created by Macbook Air on 8/20/14.
+//  Created by Macbook Air on 8/21/14.
 //  Copyright (c) 2014 Macbook Air. All rights reserved.
 //
 
-#import "CDDetalleViewController.h"
+#import "CDBillingDetailsViewController.h"
 
-@interface CDDetalleViewController ()
+@interface CDBillingDetailsViewController ()
 
 @end
 
-@implementation CDDetalleViewController
-
-@synthesize labelDescripcion,labelPeso,labelFechaLlegada,labelPesoPackage,labelTipo,package;
+@implementation CDBillingDetailsViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,13 +25,6 @@
 
 - (void)viewDidLoad
 {
-    if([package.containerArrivalDate isEqualToString:@" - "]){labelFechaLlegada.text= @"Fecha llegada: No estimada";}
-    else{ labelFechaLlegada.text= [NSString stringWithFormat:@"Fecha llegada: %@", package.containerArrivalDate];}
-    
-    labelPeso.text= [NSString stringWithFormat:@"Peso: %i", package.weight];
-    labelPeso.text= [NSString stringWithFormat:@"Precio: %i", package.price];
-    labelPeso.text= [NSString stringWithFormat:@"Tipo: %@", package.type];
-    labelDescripcion.text = [NSString stringWithFormat:@"Descripción: %@", package.description];
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
@@ -44,7 +35,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-
+/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -53,6 +44,6 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
-
+*/
 
 @end

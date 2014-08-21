@@ -43,7 +43,8 @@
                                    NSLog(@"Error");
                                }
                                else {
-                                   
+                                    NSString* newStr = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+                                   NSLog(@"aca llega %@", newStr);
                                    self.packagesList= [CDPackage createPackageList:data];
                                    [self.accessPackageDelegate packageFetched:self.packagesList];
                                }
@@ -55,7 +56,6 @@
 
 -(void)createPackage:(CDPackage *)package idUsuario:(int)idUsuario{
     NSString *path = [NSString stringWithFormat:@"http://cargodispatcher.elasticbeanstalk.com/api/cdPackages/createPackage?weight=%i&size=%i&type=%@&price=%i&description=%@&account=%i",package.weight,package.size,package.type,package.price,package.description,idUsuario];
-    NSLog(@"path %@",path);
     NSURL *apiURL = [[NSURL alloc] initWithString:[path stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
     
     NSLog(@"ulr %@", apiURL.description);
@@ -68,8 +68,7 @@
                                    NSLog(@"Error");
                                }
                                else {
-                                   NSString* newStr = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-                                   NSLog(@"Aca llega %@",newStr);
+                                  
                                    [self.accessPackageDelegate packageCreated];
                                }
                            }];

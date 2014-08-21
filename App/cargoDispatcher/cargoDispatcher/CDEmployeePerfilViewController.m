@@ -10,28 +10,32 @@
 
 @interface CDEmployeePerfilViewController ()
 
-@property CDAccessEmployee *accessEmployee;
+
 
 @end
 
 @implementation CDEmployeePerfilViewController
 
-@synthesize employee;
+@synthesize employee,timerMethod;
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
+
 
 - (void)viewDidLoad
 {
+    // Start timer and sets it to a property called saveTimer
+    /*timerMethod = [NSTimer scheduledTimerWithTimeInterval:2.0
+                                                      target:self
+                                                    selector:@selector(consultarPeticiones:)
+                                                    userInfo:nil
+                                                     repeats:YES];*/
     [self mostrarInformacion];
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+}
+
+-(void)askIfContainerArrive
+{
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -41,13 +45,21 @@
 }
 
 -(void)mostrarInformacion{
-    self.labelNombre.text = [NSString stringWithFormat:@"%@ %@" , employee.name, employee.lastName];
-    self.labelRol.text = employee.role;
-    self.labelTelefono.text= employee.telephone;
+    CDAccessEmployee *accessEmployee = [CDAccessEmployee sharedManager];
+    CDEmployee *actualEmployee= accessEmployee.employee;
+    self.labelNombre.text = [NSString stringWithFormat:@"%@ %@" , actualEmployee.name, actualEmployee.lastName];
+    self.labelRol.text = actualEmployee.role;
+    self.labelTelefono.text= actualEmployee.telephone;
     
 }
 
 
 
 
+- (IBAction)cerrarSeccion:(id)sender {
+    CDAccessEmployee *accessEmployee= [CDAccessEmployee sharedManager];
+    accessEmployee.employee=nil;
+    
+    [self performSegueWithIdentifier:@"cerrarSeccion2" sender:nil];
+}
 @end

@@ -81,6 +81,7 @@
         
         CDPackage *actualPackage= [self.packagesList objectAtIndex:indexPath.item];
         
+        [cell setBackgroundColor:[UIColor colorWithRed:177/255.0 green:177/255.0 blue:177/255.0 alpha:0]];
         cell.textLabel.text = actualPackage.description;
     }
     

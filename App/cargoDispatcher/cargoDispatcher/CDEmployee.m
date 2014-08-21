@@ -10,7 +10,7 @@
 
 @implementation CDEmployee
 
--(CDEmployee *)createEmployee:(NSData *)employeeData
++(CDEmployee *)createEmployee:(NSData *)employeeData
 {
     CDEmployee *employee= [[CDEmployee alloc] init];
     

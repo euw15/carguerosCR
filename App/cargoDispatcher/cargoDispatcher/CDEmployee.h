@@ -16,7 +16,7 @@
 @property (nonatomic, strong) NSString *lastName;
 @property (nonatomic, strong) NSString *role;
 
--(CDEmployee *)createEmployee:(NSData *)employeeData;
++(CDEmployee *)createEmployee:(NSData *)employeeData;
 
 
 @end

@@ -26,6 +26,7 @@
 }
 
 -(void)configureKeywords{
+    
     [self.cuentaTextField setDelegate:self];
     [self.cuentaTextField setReturnKeyType:UIReturnKeyDone];
     [self.cuentaTextField addTarget:self
@@ -33,6 +34,7 @@
                        forControlEvents:UIControlEventEditingDidEndOnExit];
     [super viewDidLoad];
     
+    self.claveTextField.secureTextEntry=YES;
     [self.claveTextField setDelegate:self];
     [self.claveTextField setReturnKeyType:UIReturnKeyDone];
     [self.claveTextField addTarget:self
@@ -50,8 +52,7 @@
 
 
 -(void)employeeFetched:(CDEmployee *)CDEmployee{
-    NSLog(@"aca no llego");
-    if(CDEmployee.account == nil){
+    if(CDEmployee.account==nil){
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Mensaje de Error"
                                                         message:@"Los datos ingresados no son validos"
                                                        delegate:self
@@ -83,7 +84,6 @@
 }
 
 - (IBAction)login:(id)sender {
-    CDAccessEmployee *accessEmployee= [CDAccessEmployee sharedManager];
     if([self.claveTextField.text length]!=0&&[self.cuentaTextField.text length]!=0){
         [accessEmployee logearse:self.claveTextField.text usuario:self.cuentaTextField.text];}
     else
@@ -97,4 +97,7 @@
     }
     
 }
+    
+
+
 @end
