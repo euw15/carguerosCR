@@ -10,4 +10,13 @@
 
 @interface CDEmployee : NSObject
 
+@property (nonatomic, strong) NSString * name;
+@property                   int  account;
+@property (nonatomic, strong) NSString *telephone;
+@property (nonatomic, strong) NSString *lastName;
+@property (nonatomic, strong) NSString *role;
+
+-(CDEmployee *)createEmployee:(NSData *)employeeData;
+
+
 @end

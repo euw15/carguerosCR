@@ -32,7 +32,7 @@
     //Generates URL. Check ENVIRONMENT of EnvConfig in appdelegate.
     NSURL *apiURL = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"http://cargodispatcher.elasticbeanstalk.com/api/cdpackages/UserPackages?account=%@",idUsuario]];
     
-    //Adds jSON Body
+    
 	NSURLRequest *request = [PeticionesApi createAPIGetRequest:apiURL];
     
     //Send asynchronous request **** Hacerlo sincrono y devolver un numero?
@@ -46,6 +46,31 @@
                                    
                                    self.packagesList= [CDPackage createPackageList:data];
                                    [self.accessPackageDelegate packageFetched:self.packagesList];
+                               }
+                           }];
+
+    
+}
+
+
+-(void)createPackage:(CDPackage *)package idUsuario:(int)idUsuario{
+    NSString *path = [NSString stringWithFormat:@"http://cargodispatcher.elasticbeanstalk.com/api/cdPackages/createPackage?weight=%i&size=%i&type=%@&price=%i&description=%@&account=%i",package.weight,package.size,package.type,package.price,package.description,idUsuario];
+    NSLog(@"path %@",path);
+    NSURL *apiURL = [[NSURL alloc] initWithString:[path stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+    
+    NSLog(@"ulr %@", apiURL.description);
+    NSURLRequest *request =[PeticionesApi createURLRequest:apiURL withBody:@"" withMethod:@"POST"];
+    //Send asynchronous request **** Hacerlo sincrono y devolver un numero?
+    [NSURLConnection sendAsynchronousRequest:request
+                                       queue:[NSOperationQueue mainQueue]
+                           completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
+                               if (error) {
+                                   NSLog(@"Error");
+                               }
+                               else {
+                                   NSString* newStr = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+                                   NSLog(@"Aca llega %@",newStr);
+                                   [self.accessPackageDelegate packageCreated];
                                }
                            }];
 

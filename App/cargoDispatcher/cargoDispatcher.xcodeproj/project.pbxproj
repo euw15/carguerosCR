@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		D056D24719A54A27000BE74C /* CDDetalleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D056D24619A54A27000BE74C /* CDDetalleViewController.m */; };
+		D056D24A19A56597000BE74C /* CDLoginEmployeeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D056D24919A56597000BE74C /* CDLoginEmployeeViewController.m */; };
+		D056D24D19A565DD000BE74C /* CDEmployeePerfilViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D056D24C19A565DD000BE74C /* CDEmployeePerfilViewController.m */; };
+		D056D25019A5661A000BE74C /* CDCreatePackageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D056D24F19A5661A000BE74C /* CDCreatePackageViewController.m */; };
+		D056D25319A56798000BE74C /* CDAccessEmployee.m in Sources */ = {isa = PBXBuildFile; fileRef = D056D25219A56798000BE74C /* CDAccessEmployee.m */; };
 		D08720261992ECA400D13BA5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D08720251992ECA400D13BA5 /* Foundation.framework */; };
 		D08720281992ECA400D13BA5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D08720271992ECA400D13BA5 /* CoreGraphics.framework */; };
 		D087202A1992ECA400D13BA5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D08720291992ECA400D13BA5 /* UIKit.framework */; };
@@ -49,6 +53,14 @@
 /* Begin PBXFileReference section */
 		D056D24519A54A27000BE74C /* CDDetalleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDDetalleViewController.h; sourceTree = "<group>"; };
 		D056D24619A54A27000BE74C /* CDDetalleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDDetalleViewController.m; sourceTree = "<group>"; };
+		D056D24819A56597000BE74C /* CDLoginEmployeeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDLoginEmployeeViewController.h; sourceTree = "<group>"; };
+		D056D24919A56597000BE74C /* CDLoginEmployeeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDLoginEmployeeViewController.m; sourceTree = "<group>"; };
+		D056D24B19A565DD000BE74C /* CDEmployeePerfilViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDEmployeePerfilViewController.h; sourceTree = "<group>"; };
+		D056D24C19A565DD000BE74C /* CDEmployeePerfilViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDEmployeePerfilViewController.m; sourceTree = "<group>"; };
+		D056D24E19A5661A000BE74C /* CDCreatePackageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDCreatePackageViewController.h; sourceTree = "<group>"; };
+		D056D24F19A5661A000BE74C /* CDCreatePackageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDCreatePackageViewController.m; sourceTree = "<group>"; };
+		D056D25119A56798000BE74C /* CDAccessEmployee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDAccessEmployee.h; sourceTree = "<group>"; };
+		D056D25219A56798000BE74C /* CDAccessEmployee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDAccessEmployee.m; sourceTree = "<group>"; };
 		D08720221992ECA400D13BA5 /* cargoDispatcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cargoDispatcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D08720251992ECA400D13BA5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D08720271992ECA400D13BA5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -205,6 +217,12 @@
 				D0B7FE3019A1808000C5CF0A /* CDPackagesListViewController.m */,
 				D056D24519A54A27000BE74C /* CDDetalleViewController.h */,
 				D056D24619A54A27000BE74C /* CDDetalleViewController.m */,
+				D056D24819A56597000BE74C /* CDLoginEmployeeViewController.h */,
+				D056D24919A56597000BE74C /* CDLoginEmployeeViewController.m */,
+				D056D24B19A565DD000BE74C /* CDEmployeePerfilViewController.h */,
+				D056D24C19A565DD000BE74C /* CDEmployeePerfilViewController.m */,
+				D056D24E19A5661A000BE74C /* CDCreatePackageViewController.h */,
+				D056D24F19A5661A000BE74C /* CDCreatePackageViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -237,6 +255,8 @@
 				D08720791992F56800D13BA5 /* CDAccessCustomer.m */,
 				D0B7FE2419A177BA00C5CF0A /* CDAccessPackages.h */,
 				D0B7FE2519A177BA00C5CF0A /* CDAccessPackages.m */,
+				D056D25119A56798000BE74C /* CDAccessEmployee.h */,
+				D056D25219A56798000BE74C /* CDAccessEmployee.m */,
 			);
 			name = AccesosWebServer;
 			sourceTree = "<group>";
@@ -338,6 +358,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D056D24A19A56597000BE74C /* CDLoginEmployeeViewController.m in Sources */,
 				D0B7FE2319A157B900C5CF0A /* CDPerfilViewController.m in Sources */,
 				D087206A1992F36700D13BA5 /* CDBilling.m in Sources */,
 				D087206D1992F3AC00D13BA5 /* CDPackage.m in Sources */,
@@ -345,8 +366,11 @@
 				D087207A1992F56800D13BA5 /* CDAccessCustomer.m in Sources */,
 				D056D24719A54A27000BE74C /* CDDetalleViewController.m in Sources */,
 				D0B7FE3119A1808000C5CF0A /* CDPackagesListViewController.m in Sources */,
+				D056D25019A5661A000BE74C /* CDCreatePackageViewController.m in Sources */,
 				D08720641992F2E700D13BA5 /* CDEmployee.m in Sources */,
+				D056D25319A56798000BE74C /* CDAccessEmployee.m in Sources */,
 				D08720701992F3EE00D13BA5 /* CDContainerManager.m in Sources */,
+				D056D24D19A565DD000BE74C /* CDEmployeePerfilViewController.m in Sources */,
 				D08720361992ECA400D13BA5 /* AppDelegate.m in Sources */,
 				D08720761992F44500D13BA5 /* CDRoute.m in Sources */,
 				D08720321992ECA400D13BA5 /* main.m in Sources */,

@@ -74,6 +74,7 @@
     
 }
 
+//delegate method called from CDAccessCustomer
 -(void)customerFetched:(CDCustomer *)CDCustomer
 {
     

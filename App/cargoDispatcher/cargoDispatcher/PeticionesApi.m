@@ -12,7 +12,7 @@
 
 + (NSMutableURLRequest*)createAPIRequest:(NSString*)path {
     
-	NSURL *remoteURL = [NSURL URLWithString:[NSString stringWithFormat:@"http://cargodispatcher.elasticbeanstalk.com/%@", path]];
+	NSURL *remoteURL = [NSURL URLWithString:path];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:remoteURL];
     request.HTTPMethod = @"POST";
     [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
@@ -46,7 +46,7 @@
     request.HTTPMethod = method;
     [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
-    [request setHTTPBody:[body dataUsingEncoding:NSUTF8StringEncoding]];
+    //[request setHTTPBody:[body dataUsingEncoding:NSUTF8StringEncoding]];
 	return request;
 }
 
