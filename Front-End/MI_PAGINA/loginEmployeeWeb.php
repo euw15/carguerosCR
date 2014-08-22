@@ -1,4 +1,7 @@
-<?php  
+<?php  	
+
+	session_start();
+	ob_start(); 
 
 	include 'call_api.php';
     include("employee_login.html");
@@ -6,14 +9,13 @@
 	$idEmployee = $_POST["idEmployee"];
 	$idPassword = $_POST["idPassword"];
 
-	$json = CallAPI("GET", "http://cargodispatcher.elasticbeanstalk.com/api/cdcustomer/login?password=$idPassword&account=$idEmployee", false);
-
+	$json = CallAPI("GET", "http://cargodispatcher.elasticbeanstalk.com/api/cdemployee/loginEmployee?password=$idPassword&idEmployee=$idEmployee", false);
 
 	$obj = json_decode($json,true);
 
 
-	if(empty($obj)){
 
+	if(empty($obj)){
 		echo  '<script type="text/javascript">
 				$(function ()  {
 				$("#myError").modal();  
@@ -22,19 +24,17 @@
 
 	}else{
 
-	echo "<html lang='en'>
-			<body>
-					   <form id='openEmployeePage'  role='form' action='user_page.php' method='POST'>
-			    		<!-- Password input-->
-							 <input id='password' name='password' type='hidden' value=$idPassword placeholder='Password'>		 								
-					  		 <input id='account' name='account' type='hidden' value=$idEmployee placeholder='Account'>   
-						</form>
-				
-						<script type='text/javascript'>
-    						document.getElementById('openEmployeePage').submit(); // SUBMIT FORM
-						</script>
-		</body>
-		</html>";
+		foreach($obj as $item){
+	        $Name = $item["name"];
+	        $LastName = $item["last_name"];
+	    }
+
+		$_SESSION['Name']=$Name; 
+		$_SESSION['LastName']=$LastName; 
+
+		echo '<script type="text/javascript">
+			  window.location = "admin_web.php"
+			  </script>';
 	}
 
 ?>

@@ -1,7 +1,7 @@
 <?php  
 
 	include 'call_api.php';
-    include("admin_web.html");
+    include("admin_web.php");
 
 	$idName = $_POST["idName"];
 	$idLastName = $_POST["idLastName"];
@@ -11,7 +11,7 @@
 
 	$json = CallAPI("POST", "http://cargodispatcher.elasticbeanstalk.com/api/cdemployee/SingUp?name=$idName&last_name=$idLastName&telephone=$idPhone&password=$idPassword&role=1", false);
 
-
+echo $json;
 	$obj = json_decode($json,true);
 
 
@@ -26,11 +26,12 @@
 
 	}else{
 
-		echo  '<script type="text/javascript">
-				$(function ()  {
-				$("#success").modal();  
-				});
-	    </script>';
+	
+		echo "<script language='javascript' type='text/javascript'>";
+		echo "$(function (){";
+	    echo "document.getElementById('h3account').innerHTML = $json;";
+	    echo "$('#successCreateUser').modal();});";
+		echo "</script>";
 
 	}
 ?>

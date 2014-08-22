@@ -1,0 +1,509 @@
+
+
+<?php 
+    session_start();
+    ob_start(); 
+    $Nombre =  $_SESSION['Name'];
+    $LastName =  $_SESSION['LastName']; 
+?> 
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
+
+        <title>Blank Template for Bootstrap</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="css/bootstrap.css" rel="stylesheet">
+
+        <!-- Custom styles for this template -->
+        <link href="new.css" rel="stylesheet">
+
+        <style type="text/css">
+            .pane {
+                display: block;
+                overflow-y: scroll;
+                max-height:250px;
+            }
+            .modal-header-success {
+                color:#fff;
+                padding:9px 15px;
+                border-bottom:1px solid #eee;
+                background-color: #5cb85c;
+                -webkit-border-top-left-radius: 5px;
+                -webkit-border-top-right-radius: 5px;
+                -moz-border-radius-topleft: 5px;
+                -moz-border-radius-topright: 5px;
+                 border-top-left-radius: 5px;
+                 border-top-right-radius: 5px;
+             }
+             .modal-header-danger {
+                color:#fff;
+                padding:9px 15px;
+                border-bottom:1px solid #eee;
+                background-color: #d9534f;
+                -webkit-border-top-left-radius: 5px;
+                -webkit-border-top-right-radius: 5px;
+                -moz-border-radius-topleft: 5px;
+                -moz-border-radius-topright: 5px;
+                 border-top-left-radius: 5px;
+                 border-top-right-radius: 5px;
+             }
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <div class="container">
+            <div class="row">
+                <div class="well well-lg">
+                    <h4>
+                         <?php echo $Nombre; ?>  
+                         <?php echo $LastName; ?>                
+                    </h4>
+
+                    <a  class="btn btn-default btn-md btn-primary" href="index.html">Home</a>
+                    <a  class="btn btn-default pull-right btn-md btn-primary" href="index.html">Sign Up</a>
+
+                </div>
+            </div>
+        </div>
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+
+        <div class="container">
+            <h2 class="text-center text-muted">Administration</h2>
+            <hr>
+            <h3 class="text-center">Customer</h3>
+        </div>
+
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <h4>Register Package</h4>
+                    <img src="http://www.bwfparcels.com/wp-content/uploads/2014/03/PackageIcon.png" width="100">
+                    <button type="button" class="btn btn-default btn-md btn-danger" data-toggle="modal" data-target="#modalRegister">Register</button>
+                </div>
+
+
+                <div class="col-lg-6">
+
+                    <h4>All Packages</h4>
+                    <div class="row">
+                        <div class="col-md-9">
+                            <form action="#" method="get">
+                                <div class="input-group">
+                                    <!-- USE TWITTER TYPEAHEAD JSON WITH API TO SEARCH -->
+                                    <input class="form-control" id="system-search" name="q" placeholder="Search for" required>
+                                    <span class="input-group-btn">
+                                        <button type="submit" class="btn btn-default"><i class="glyphicon glyphicon-search"></i></button>
+                                    </span>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="pane">
+
+                        <table class="table table-list-search table-bordered table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Costumer Account</th>
+                                    <th>Package ID</th>
+                                    <th>State</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Sample</td>
+                                    <td>Filter</td>
+                                    <td>56345</td>
+                                </tr>
+                                <tr>
+                                    <td>Try</td>
+                                    <td>It</td>
+                                    <td>453455</td>
+                                </tr>
+                                <tr>
+                                    <td>Try</td>
+                                    <td>It</td>
+                                    <td>453455</td>
+                                </tr>
+                                <tr>
+                                    <td>Try</td>
+                                    <td>It</td>
+                                    <td>453455</td>
+                                </tr>
+                            </tbody>
+                        </table>   
+                    </div>
+                </div>
+            </div >
+        </div >
+
+        <hr>
+        <div class="container">
+            <h3 class="text-center">Employee</h3>
+            <img width="100" src="http://fleet.affablesolution.com/assets/img/photos/img16.jpg">
+            <button type="button" class="btn btn-default btn-info btn-md" data-toggle="modal" data-target="#modalCreateEmployee">Create New Employee</button>
+        </div>
+
+        <div class="container">
+            <h3 class="text-center">Route</h3>
+            <img width="100" src="https://cdn4.iconfinder.com/data/icons/ios7-active-strategy/512/route_sign_road_direction-512.png">
+            <button type="button" class="btn btn-default btn-success btn-md" data-toggle="modal" data-target="#modalCreateRoute">Create New Route</button>
+        </div>
+
+        <div class="container">
+            <h3 class="text-center">Container</h3>
+            <img width="100" src="http://icons.iconarchive.com/icons/antrepo/container/256/yellow-icon.png">
+            <button type="button" class="btn btn-default btn-warning btn-md" data-toggle="modal" data-target="#modalCreateContainer">Create New Container</button>
+        </div>
+
+
+
+        <!-- Modal Registro Paquete-->
+        <div class="modal fade" id="modalRegister" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">
+                            <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                        </button>
+                        <h4 class="modal-title" id="myModalLabel">Register Package</h4>
+                    </div>
+                    <div class="modal-body">
+
+                        <form class="form-horizontal" action="register_package.php" method="POST">
+                            <fieldset>
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="idAccount">Costumer Account</label>  
+                                    <div class="col-md-6">
+                                        <input id="idAccount" name="idAccount" type="text" placeholder="" class="form-control input-md" required="">
+                                    </div>
+                                </div>
+                                <!-- Select Basic -->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="idType">Type</label>
+                                    <div class="col-md-6">
+                                        <select id="idType" name="idType" class="form-control">
+                                            <option value="1">Regular</option>
+                                            <option value="2">Special</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="idSize">Size</label>  
+                                    <div class="col-md-6">
+                                        <input id="idSize" name="idSize" type="text" placeholder="" class="form-control input-md" required="">  
+                                    </div>
+                                </div>
+
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="idWeight">Weight</label>  
+                                    <div class="col-md-6">
+                                        <input id="idWeight" name="idWeight" type="text" placeholder="" class="form-control input-md" required="">  
+                                    </div>
+                                </div>
+
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="idValue">Value</label>  
+                                    <div class="col-md-6">
+                                        <input id="idValue" name="idValue" type="text" placeholder="" class="form-control input-md" required="">
+
+                                    </div>
+                                </div>
+
+                                <!-- Textarea -->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="idDescription">Description</label>
+                                    <div class="col-md-4">                     
+                                        <textarea class="form-control" id="idDescription" name="idDescription" >Write a little description of the package</textarea>
+                                    </div>
+                                </div>
+
+                                <!-- Form actions -->
+                                <div class="modal-footer form-group">
+                                    <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-primary">Save changes</button>
+                                </div>
+
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Ingreso Empleado-->
+        <div class="modal fade" id="modalCreateEmployee" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">
+                            <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                        </button>
+                        <h4 class="modal-title" id="myModalLabel">Create New Employee</h4>
+                    </div>
+                    <div class="modal-body">
+
+                        <form class="form-horizontal" action="create_employee.php" method="POST">
+                            <fieldset>
+
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="idName">Name</label>  
+                                    <div class="col-md-6">
+                                        <input id="idName" name="idName" type="text" placeholder="" class="form-control input-md" required="">
+
+                                    </div>
+                                </div>
+
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="idLastName">LastName</label>  
+                                    <div class="col-md-6">
+                                        <input id="idLastName" name="idLastName" type="text" placeholder="" class="form-control input-md" required="">
+
+                                    </div>
+                                </div>
+
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="idPhone">Telephone</label>  
+                                    <div class="col-md-6">
+                                        <input id="idPhone" name="idPhone" type="text" placeholder="" class="form-control input-md" required="">
+
+                                    </div>
+                                </div>
+
+                                <!-- Password input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="idPassword">Password</label>
+                                    <div class="col-md-6">
+                                        <input id="idPassword" name="idPassword" type="password" placeholder="" class="form-control input-md" required="">
+
+                                    </div>
+                                </div>
+
+                                <!-- Form actions -->
+                                <div class="modal-footer form-group">
+                                    <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-primary">Save changes</button>
+                                </div>
+
+
+                            </fieldset>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Ingreso Ruta-->
+        <div class="modal fade" id="modalCreateRoute" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">
+                            <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                        </button>
+                        <h4 class="modal-title" id="myModalLabel">Create New Route</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-horizontal" action="create_route.php" method="POST">
+                            <fieldset>
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="idName">Name</label>  
+                                    <div class="col-md-6">
+                                        <input id="idName" name="idName" type="text" placeholder="" class="form-control input-md" required="">
+
+                                    </div>
+                                </div>
+
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="idExit">Exit Point</label>  
+                                    <div class="col-md-6">
+                                        <input id="idExit" name="idExit" type="text" placeholder="" class="form-control input-md" required="">
+
+                                    </div>
+                                </div>
+
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="idArrival">Arrival Point</label>  
+                                    <div class="col-md-6">
+                                        <input id="idArrival" name="idArrival" type="text" placeholder="" class="form-control input-md" required="">
+
+                                    </div>
+                                </div>
+
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="idPrice">Price</label>  
+                                    <div class="col-md-6">
+                                        <input id="idPrice" name="idPrice" type="text" placeholder="" class="form-control input-md" required="">
+
+                                    </div>
+                                </div>
+
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="idDuration">Duration</label>  
+                                    <div class="col-md-6">
+                                        <input id="idDuration" name="idDuration" type="text" placeholder="" class="form-control input-md" required="">
+
+                                    </div>
+                                </div>
+
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="idAmount">Max Amount</label>  
+                                    <div class="col-md-6">
+                                        <input id="idAmount" name="idAmount" type="text" placeholder="" class="form-control input-md" required="">
+
+                                    </div>
+                                </div>
+
+                                <!-- Form actions -->
+                                <div class="modal-footer form-group">
+                                    <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-primary">Save changes</button>
+                                </div>
+
+                            </fieldset>
+                        </form>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Ingreso Container-->
+        <div class="modal fade" id="modalCreateContainer" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">
+                            <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                        </button>
+                        <h4 class="modal-title" id="myModalLabel">Create New Container</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-horizontal" action="create_container.php" method="POST">
+                            <fieldset>
+
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="idMaxSize">Max Size</label>  
+                                    <div class="col-md-6">
+                                        <input id="idMaxSize" name="idMaxSize" type="text" placeholder="" class="form-control input-md" required="">
+
+                                    </div>
+                                </div>
+
+                                <!-- Form actions -->
+                                <div class="modal-footer form-group">
+                                    <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-primary">Save changes</button>
+                                </div>
+
+                            </fieldset>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="success" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+
+                <div class="modal-header modal-header-success">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4><i class="glyphicon glyphicon-thumbs-up"></i>Successfully !!</h4>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-sm pull-left" data-dismiss="modal">Close</button>
+                </div>
+
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="danger" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header modal-header-danger">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4><i class="glyphicon glyphicon-thumbs-down"></i>Error in Recording Data</h4>
+                </div>      
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+
+    <!-- Modal -->
+        <div class="modal fade" id="successCreateUser" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-md">
+                <div class="modal-content">
+
+                    <div class="modal-header modal-header-success">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4><i class="glyphicon glyphicon-thumbs-up"></i>Successfully !!</h4>
+                    </div>
+                     <div class="modal-body">
+                         <h3>Your Account Number: </h3>
+                         <h4 id="h3account">xxx</h4>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-sm pull-left" data-dismiss="modal">Close</button>
+                    </div>
+
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+
+
+        <br>
+
+
+        <script src="http://code.jquery.com/jquery.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/bootstrap.dropdown.js"></script>
+        <script type="text/javascript" src="searchFunction.js"></script>
+
+    </body>
+</html>

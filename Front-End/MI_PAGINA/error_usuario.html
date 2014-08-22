@@ -1,13 +1,12 @@
-<!DOCTYPE html>
-
+<?php
+$url = "something"; // In my php files $url contain multiple values
+?>
 <html>
-<head>
-	<title>This is test</title>
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-</head>
-<body>
+<h1>
+	
+<?php echo $url; ?>
 
-	<h1>Error al iniciar sesion</h1>	
+</h1>
 
-</body>
+<td><input type="text" size="50" value="<?php echo $url; ?>"/></td>
 </html>
