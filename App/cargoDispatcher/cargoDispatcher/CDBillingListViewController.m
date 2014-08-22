@@ -32,6 +32,9 @@
 {
     self.billingAccess= [CDAccessBilling sharedManager];
     CDCustomer *customer=[[CDAccessCustomer sharedManager] getActualCustomer];
+    
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    
     [self.billingAccess getAllCustomerBilling:customer];
     self.billingAccess.accessBillingDelegate=self;
     
@@ -46,6 +49,7 @@
 -(void)billingListFethed:(NSArray *)billingList{
     self.billingList=billingList;
     
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
     [self.UITableViewListBilling reloadData];
 }
 

@@ -10,6 +10,7 @@
 #import "CDAccessBilling.h"
 #import "CDAccessCustomer.h"
 #import "CDBillingDetailsViewController.h"
+#import "MBProgressHUD.h"
 
 @interface CDBillingListViewController : UIViewController <AccessBillingDelegate,UITableViewDataSource, UITableViewDelegate>
 

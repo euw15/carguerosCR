@@ -34,7 +34,13 @@
     self.listTableView.delegate=self;
     accessPackages= [CDAccessPackages sharedManager];
     accessPackages.accessPackageDelegate=self;
-    [accessPackages  getPackagesList:@"1"];
+    
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    CDCustomer *customer=[[CDAccessCustomer sharedManager] getActualCustomer];
+
+    
+
+    [accessPackages  getPackagesList:customer];
     
     
     [super viewDidLoad];
@@ -91,6 +97,7 @@
 //delegate method
 -(void)packageFetched:(NSArray *)NSArrayPackage
 {
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
     self.packagesList= NSArrayPackage;
     [self.listTableView reloadData];
 }

@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "PeticionesApi.h"
 #import "CDPackage.h"
+#import "CDCustomer.h"
 
 
 @protocol AccessPackageDelegate
@@ -21,7 +22,7 @@
 
 + (id)sharedManager;
 
--(void)getPackagesList:(NSString *)idUsuario;
+-(void)getPackagesList:(CDCustomer *)idUsuario;
 -(void)createPackage:(CDPackage *)package idUsuario:(int)idUsuario;
 
 @property (nonatomic, weak) id <AccessPackageDelegate> accessPackageDelegate;

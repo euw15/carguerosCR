@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "CDAccessPackages.h"
 #import "CDDetalleViewController.h"
+#import "CDAccessCustomer.h"
+#import "MBProgressHUD.h"
+
 
 @interface CDPackagesListViewController : UIViewController <UITableViewDataSource, UITableViewDelegate,AccessPackageDelegate>
 

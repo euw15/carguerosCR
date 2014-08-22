@@ -28,10 +28,11 @@
     return self;
 }
 
--(void)getPackagesList:(NSString *)idUsuario{
+-(void)getPackagesList:(CDCustomer *)idUsuario{
     //Generates URL. Check ENVIRONMENT of EnvConfig in appdelegate.
-    NSURL *apiURL = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"http://cargodispatcher.elasticbeanstalk.com/api/cdpackages/UserPackages?account=%@",idUsuario]];
+    NSURL *apiURL = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"http://cargodispatcher.elasticbeanstalk.com/api/cdpackages/UserPackages?account=%i",idUsuario.account]];
     
+    NSLog(@"%@",[NSString stringWithFormat:@"http://cargodispatcher.elasticbeanstalk.com/api/cdpackages/UserPackages?account=%i",idUsuario.account]);
     
 	NSURLRequest *request = [PeticionesApi createAPIGetRequest:apiURL];
     
@@ -43,8 +44,6 @@
                                    NSLog(@"Error");
                                }
                                else {
-                                    NSString* newStr = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-                                   
                                    self.packagesList= [CDPackage createPackageList:data];
                                    [self.accessPackageDelegate packageFetched:self.packagesList];
                                }
