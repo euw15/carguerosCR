@@ -31,16 +31,27 @@
         {
             if(object!=nil)
             {
-               
-                CDBilling *bill= [[CDBilling alloc] init];
-              
-                bill.costStorage      = [[object objectForKey:@"costStorage"] integerValue];
-                bill.discount         = [[object objectForKey:@"discount"] integerValue];
-                bill.freight          = [[object objectForKey:@"freight"] integerValue];
-                bill.idBilling        = [[object objectForKey:@"idBilling"] integerValue];
-                bill.tax              = [[object objectForKey:@"tax"] integerValue];
-          
-                [billList addObject:bill];
+                @try {
+                    
+                    CDBilling *bill= [[CDBilling alloc] init];
+                    
+                    bill.costStorage      = [[object objectForKey:@"costStorage"] integerValue];
+                    bill.discount         = [[object objectForKey:@"discount"] integerValue];
+                    bill.freight          = [[object objectForKey:@"freight"] integerValue];
+                    bill.idBilling        = [[object objectForKey:@"idBilling"] integerValue];
+                    bill.tax              = [[object objectForKey:@"tax"] integerValue];
+                    
+                    [billList addObject:bill];
+                    
+                }
+                @catch (NSException * e) {
+                    
+                }
+                @finally {
+                    
+                }
+
+                
             }
         }
     }

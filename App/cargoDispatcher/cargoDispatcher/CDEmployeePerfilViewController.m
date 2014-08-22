@@ -22,12 +22,14 @@
 
 - (void)viewDidLoad
 {
+    self.accessContainers = [CDAccessContainers sharedManager];
+    self.accessContainers.accessBillingDelegate=self;
     // Start timer and sets it to a property called saveTimer
-    /*timerMethod = [NSTimer scheduledTimerWithTimeInterval:2.0
+    timerMethod = [NSTimer scheduledTimerWithTimeInterval:2.0
                                                       target:self
-                                                    selector:@selector(consultarPeticiones:)
+                                                    selector:@selector(askIfContainerArrive)
                                                     userInfo:nil
-                                                     repeats:YES];*/
+                                                     repeats:YES];
     [self mostrarInformacion];
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -35,7 +37,7 @@
 
 -(void)askIfContainerArrive
 {
-    
+    [self.accessContainers hasContainerArrive];
 }
 
 - (void)didReceiveMemoryWarning
@@ -61,5 +63,14 @@
     accessEmployee.employee=nil;
     
     [self performSegueWithIdentifier:@"cerrarSeccion2" sender:nil];
+}
+
+-(void)containerArrive:(NSString *)idContainer{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Información"
+                                                    message:[NSString stringWithFormat:@"Llego el container %@", idContainer]
+                                                   delegate:self
+                                          cancelButtonTitle:@"OK"
+                                          otherButtonTitles:nil];
+    [alert show];
 }
 @end

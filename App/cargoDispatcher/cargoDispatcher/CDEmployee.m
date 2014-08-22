@@ -27,11 +27,21 @@
         {
             if(object!=nil)
             {
-                employee.name      = [object objectForKey:@"name"];
-                employee.lastName  = [object objectForKey:@"last_name"];
-                employee.account   = [[object objectForKey:@"personIdPerson"] intValue];
-                employee.telephone = [object objectForKey:@"telephone"];
-                employee.role      = [object objectForKey:@"role"];
+                @try {
+                    
+                    employee.name      = [object objectForKey:@"name"];
+                    employee.lastName  = [object objectForKey:@"last_name"];
+                    employee.account   = [[object objectForKey:@"personIdPerson"] intValue];
+                    employee.telephone = [object objectForKey:@"telephone"];
+                    employee.role      = [object objectForKey:@"role"];
+                    
+                }
+                @catch (NSException * e) {
+                    
+                }
+                @finally {
+                    
+                }
             }
         }
     }

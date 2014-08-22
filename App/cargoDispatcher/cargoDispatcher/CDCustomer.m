@@ -28,12 +28,28 @@
     {
         if(object!=nil)
         {
-            customer.name      = [object objectForKey:@"name"];
-            customer.lastName  = [object objectForKey:@"lastName"];
-            customer.account   = [[object objectForKey:@"account"] intValue];
-            customer.score     = [[object objectForKey:@"score"] intValue];
-            customer.type      = [object objectForKey:@"type"];
-            customer.telephone = [object objectForKey:@"telephone"];
+            if(object!=nil)
+            {
+                @try {
+                    
+                    customer.name      = [object objectForKey:@"name"];
+                    customer.lastName  = [object objectForKey:@"lastName"];
+                    customer.account   = [[object objectForKey:@"account"] intValue];
+                    customer.score     = [[object objectForKey:@"score"] intValue];
+                    customer.type      = [object objectForKey:@"type"];
+                    customer.telephone = [object objectForKey:@"telephone"];
+
+                    
+                }
+                @catch (NSException * e) {
+                    
+                }
+                @finally {
+                    
+                }
+                
+            }
+   
         }
         
     }

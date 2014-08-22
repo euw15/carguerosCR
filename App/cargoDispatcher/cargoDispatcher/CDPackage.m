@@ -27,19 +27,29 @@
         {
             if(object!=nil)
             {
-                CDPackage *package= [[CDPackage alloc] init];
-                package.idPackages      = [object objectForKey:@"idPackages"];
-                package.weight  = [[object objectForKey:@"weight"] intValue];
-                package.size   = [[object objectForKey:@"size"] intValue];
-                package.price     = [[object objectForKey:@"score"] intValue];
-                package.type      = [object objectForKey:@"type"];
-                package.description = [object objectForKey:@"description"];
-                package.customerId = [[object objectForKey:@"customerId"] intValue];
-                package.packageState = [object objectForKey:@"packageState"];
-                package.containerArrivalDate = [object objectForKey:@"containerArrivalDate"];
-                package.container = [object objectForKey:@"container"];
-                
-                [arrayPackages addObject:package];
+                @try {
+                    
+                    CDPackage *package= [[CDPackage alloc] init];
+                    package.idPackages      = [object objectForKey:@"idPackages"];
+                    package.weight  = [[object objectForKey:@"weight"] intValue];
+                    package.size   = [[object objectForKey:@"size"] intValue];
+                    package.price     = [[object objectForKey:@"score"] intValue];
+                    package.type      = [object objectForKey:@"type"];
+                    package.description = [object objectForKey:@"description"];
+                    package.customerId = [[object objectForKey:@"customerId"] intValue];
+                    package.packageState = [object objectForKey:@"packageState"];
+                    package.containerArrivalDate = [object objectForKey:@"containerArrivalDate"];
+                    package.container = [object objectForKey:@"container"];
+                    
+                    [arrayPackages addObject:package];
+                    
+                }
+                @catch (NSException * e) {
+                    
+                }
+                @finally {
+                    
+                }
             }
             
         }

@@ -8,14 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "CDAccessEmployee.h"
+#import "CDAccessContainers.h"
 
-
-@interface CDEmployeePerfilViewController : UIViewController 
+@interface CDEmployeePerfilViewController : UIViewController <AccessContainerDelegate>
 
 @property (strong) CDEmployee * employee;
-
 @property NSTimer *timerMethod;
-
+@property CDAccessContainers *accessContainers;
 @property (strong, nonatomic) IBOutlet UILabel *labelRol;
 @property (strong, nonatomic) IBOutlet UILabel *labelTelefono;
 @property (strong, nonatomic) IBOutlet UILabel *labelNombre;

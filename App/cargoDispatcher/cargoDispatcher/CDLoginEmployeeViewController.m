@@ -22,6 +22,7 @@
     accessEmployee = [CDAccessEmployee sharedManager];
     accessEmployee.accessEmployeeDelegate=self;
     [super viewDidLoad];
+    [self configureKeywords];
     // Do any additional setup after loading the view.
 }
 
