@@ -44,7 +44,7 @@
                                }
                                else {
                                     NSString* newStr = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-                                   NSLog(@"aca llega %@", newStr);
+                                   
                                    self.packagesList= [CDPackage createPackageList:data];
                                    [self.accessPackageDelegate packageFetched:self.packagesList];
                                }
@@ -58,7 +58,6 @@
     NSString *path = [NSString stringWithFormat:@"http://cargodispatcher.elasticbeanstalk.com/api/cdPackages/createPackage?weight=%i&size=%i&type=%@&price=%i&description=%@&account=%i",package.weight,package.size,package.type,package.price,package.description,idUsuario];
     NSURL *apiURL = [[NSURL alloc] initWithString:[path stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
     
-    NSLog(@"ulr %@", apiURL.description);
     NSURLRequest *request =[PeticionesApi createURLRequest:apiURL withBody:@"" withMethod:@"POST"];
     //Send asynchronous request **** Hacerlo sincrono y devolver un numero?
     [NSURLConnection sendAsynchronousRequest:request

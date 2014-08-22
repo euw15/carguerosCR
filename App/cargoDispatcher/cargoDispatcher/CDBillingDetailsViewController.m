@@ -14,17 +14,11 @@
 
 @implementation CDBillingDetailsViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
 
 - (void)viewDidLoad
 {
+   
+    [self setLabelTitles];
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
@@ -35,6 +29,15 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+-(void)setLabelTitles{
+    CDAccessBilling * billingAccess= [CDAccessBilling sharedManager];
+    CDBilling *billing= billingAccess.billing;
+    self.labelDescount.text= [NSString stringWithFormat:@"Descuento: %i", billing.discount];
+    self.labelFlete.text= [NSString stringWithFormat:@"Flete: %i", billing.freight];
+    self.labelTax.text= [NSString stringWithFormat:@"Impuestos: %i", billing.tax];
+    
+}
 /*
 #pragma mark - Navigation
 

@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CDAccessBilling.h"
+#import "CDAccessCustomer.h"
+#import "CDBillingDetailsViewController.h"
 
-@interface CDBillingListViewController : UIViewController
+@interface CDBillingListViewController : UIViewController <AccessBillingDelegate,UITableViewDataSource, UITableViewDelegate>
+
+
+@property (weak, nonatomic) IBOutlet UITableView *UITableViewListBilling;
+@property (weak, nonatomic) IBOutlet UILabel *tituloFacturas;
 
 @end

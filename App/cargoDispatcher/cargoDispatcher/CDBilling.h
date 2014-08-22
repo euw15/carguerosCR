@@ -10,4 +10,13 @@
 
 @interface CDBilling : NSObject
 
+@property NSInteger  costStorage;
+@property NSInteger  discount;
+@property NSInteger  freight;
+@property NSInteger  idBilling;
+@property NSInteger  tax;
+
+
+-(NSArray *)createBillingList:(NSData *)billingData;
+
 @end

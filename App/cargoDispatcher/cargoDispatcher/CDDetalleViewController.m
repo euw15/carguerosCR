@@ -27,12 +27,12 @@
 
 - (void)viewDidLoad
 {
-    if([package.containerArrivalDate isEqualToString:@" - "]){labelFechaLlegada.text= @"Fecha llegada: No estimada";}
+    if([package.containerArrivalDate isEqualToString:@"-"]){labelFechaLlegada.text= @"Fecha llegada: No estimada";}
     else{ labelFechaLlegada.text= [NSString stringWithFormat:@"Fecha llegada: %@", package.containerArrivalDate];}
     
-    labelPeso.text= [NSString stringWithFormat:@"Peso: %i", package.weight];
+    labelPesoPackage.text= [NSString stringWithFormat:@"Peso: %i", package.weight];
     labelPeso.text= [NSString stringWithFormat:@"Precio: %i", package.price];
-    labelPeso.text= [NSString stringWithFormat:@"Tipo: %@", package.type];
+    labelTipo.text= [NSString stringWithFormat:@"Tipo: %@", package.type];
     labelDescripcion.text = [NSString stringWithFormat:@"Descripción: %@", package.description];
     [super viewDidLoad];
     // Do any additional setup after loading the view.
