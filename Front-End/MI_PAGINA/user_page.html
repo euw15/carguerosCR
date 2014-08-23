@@ -1,0 +1,62 @@
+
+<?php 
+    session_start();
+    ob_start(); 
+    $Nombre =  $_SESSION['Name']; 
+?> 
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="editor" content="brix.io">
+
+        <title>Bootstrap 101 Template</title>
+
+        <!-- Bootstrap -->
+        <link href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Font Awesome -->
+        <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+        <!-- User -->
+        <link href="css/style.css" rel="stylesheet">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+    </head>
+    <body class="text-left">
+        <div class="container"><nav class="navbar navbar-default" role="navigation">
+                <ul class="nav navbar-nav bg-success">
+                    <li class="active"><a href="#">Home</a></li>
+
+
+                </ul>
+            </nav><h2 class="text-warning">Your Account</h2>
+            <div class="row"><hr></div>
+            <div class="row">
+                <div class="col-md-12"><h3 class="" name="Name" id="idName"><?php echo $v1; ?></h3></div>
+            </div>
+
+
+            <hr>
+            <div class="row">
+                <div class="col-md-4"><h4 class="text-warning">Your Orders</h4><img class="" src="http://thumbs.dreamstime.com/x/mail-box-package-16764950.jpg"></div><div class="col-md-4"><h4 class="text-warning">Your Billing</h4><img class="" src="http://thumbs.dreamstime.com/x/mail-box-package-16764950.jpg"></div><div class="col-md-4"><h4 class="text-warning">Your Orders</h4><img class="" src="http://thumbs.dreamstime.com/x/mail-box-package-16764950.jpg"></div>
+
+
+            </div>
+        </div>
+    </body>
+
+</html>
+
