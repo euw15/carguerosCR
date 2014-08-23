@@ -63,7 +63,7 @@
 
 -(void)askContainerArrive:(CDContainerRoute *)containerRoute{
     //Generates URL. Check ENVIRONMENT of EnvConfig in appdelegate.
-    NSURL *apiURL = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"http://cargodispatcher.elasticbeanstalk.com/api/CDContainer/containerArrive?idContainer=%i&route=%i",containerRoute.idContaier,containerRoute.idRoute]];
+    NSURL *apiURL = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"http://cargodispatcher.elasticbeanstalk.com/api/cdcontainer/arrivalContainerNotNotified"]];
     
     
     //Adds jSON Body
@@ -77,11 +77,29 @@
                                    NSLog(@"Error");
                                }
                                else {
-                                   if([self askContainerArriveAux:data]){
-                                       [self.accessBillingDelegate containerArrive:[NSString stringWithFormat:@"%i",containerRoute.idContaier]];
-                                   }
+                                   NSError *error = nil;
+                                   NSArray *jsonArray = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+                                   
+                                   for (id object in jsonArray)
+                                   {
+                                       if(object!=nil)
+                                       {
+                                           @try {
+                                               
+                                               int hasArrive  = [[object objectForKey:@"idContainer"] intValue];
+                                               [self.accessBillingDelegate containerArrive:[NSString stringWithFormat:@"Llego el paquete %i", hasArrive]];
+                                               [self notificarCustomerPackage:[[object objectForKey:@"idContainer_Manager"] intValue]];
+                                           }
+                                           @catch (NSException * e) {
+                                               
+                                           }
+                                           @finally {
+                                               
+                                           }
+                                           
+                                       }
                                }
-                           }];
+                               }}];
 }
 
 -(BOOL)askContainerArriveAux:(NSData *)dataContainer{
@@ -120,6 +138,28 @@
     }
     return NO;
 }
+
+-(void)notificarCustomerPackage:(int )idCustomerManage{
+    //Generates URL. Check ENVIRONMENT of EnvConfig in appdelegate.
+    NSURL *apiURL = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"http://cargodispatcher.elasticbeanstalk.com/api/CDContainer/setNotifiedContainerArrived?idContainerManager=%i",idCustomerManage]];
+    
+    
+    //Adds jSON Body
+	NSURLRequest *request = [PeticionesApi createURLRequest:apiURL withBody:nil withMethod:@"PUT"];
+    
+    //Send asynchronous request **** Hacerlo sincrono y devolver un numero?
+    [NSURLConnection sendAsynchronousRequest:request
+                                       queue:[NSOperationQueue mainQueue]
+                           completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
+                               if (error) {
+                                   NSLog(@"Error");
+                               }
+                               else {
+                                   
+                               }
+                           }];
+}
+
 
 
 

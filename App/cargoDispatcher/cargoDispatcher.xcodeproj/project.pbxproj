@@ -20,12 +20,12 @@
 		D056D26219A5C802000BE74C /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = D056D26119A5C802000BE74C /* user.png */; };
 		D056D26419A5C8E9000BE74C /* bill.png in Resources */ = {isa = PBXBuildFile; fileRef = D056D26319A5C8E9000BE74C /* bill.png */; };
 		D056D26619A5CBB6000BE74C /* employee.png in Resources */ = {isa = PBXBuildFile; fileRef = D056D26519A5CBB6000BE74C /* employee.png */; };
-		D056D26819A5CF78000BE74C /* package2.png in Resources */ = {isa = PBXBuildFile; fileRef = D056D26719A5CF78000BE74C /* package2.png */; };
 		D056D26B19A5D1DA000BE74C /* CDBillingListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D056D26A19A5D1DA000BE74C /* CDBillingListViewController.m */; };
 		D056D26E19A5D4A8000BE74C /* CDBillingDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D056D26D19A5D4A8000BE74C /* CDBillingDetailsViewController.m */; };
 		D056D27019A5D635000BE74C /* money.png in Resources */ = {isa = PBXBuildFile; fileRef = D056D26F19A5D635000BE74C /* money.png */; };
 		D056D27619A5D884000BE74C /* CDCreateNewEmployeeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D056D27519A5D884000BE74C /* CDCreateNewEmployeeViewController.m */; };
 		D056D27819A5DD7F000BE74C /* empoyee3.png in Resources */ = {isa = PBXBuildFile; fileRef = D056D27719A5DD7F000BE74C /* empoyee3.png */; };
+		D058B18419A8881E000CEF36 /* package2.png in Resources */ = {isa = PBXBuildFile; fileRef = D058B18319A8881E000CEF36 /* package2.png */; };
 		D08622A119A6C1C20016FAF5 /* CDAccessContainers.m in Sources */ = {isa = PBXBuildFile; fileRef = D08622A019A6C1C20016FAF5 /* CDAccessContainers.m */; };
 		D08622A419A6C4230016FAF5 /* CDContainerRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = D08622A319A6C4230016FAF5 /* CDContainerRoute.m */; };
 		D08622A819A6F16C0016FAF5 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = D08622A719A6F16C0016FAF5 /* MBProgressHUD.m */; };
@@ -36,7 +36,6 @@
 		D08720321992ECA400D13BA5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D08720311992ECA400D13BA5 /* main.m */; };
 		D08720361992ECA400D13BA5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D08720351992ECA400D13BA5 /* AppDelegate.m */; };
 		D08720391992ECA400D13BA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D08720371992ECA400D13BA5 /* Main.storyboard */; };
-		D087203E1992ECA400D13BA5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D087203D1992ECA400D13BA5 /* Images.xcassets */; };
 		D08720451992ECA400D13BA5 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D08720441992ECA400D13BA5 /* XCTest.framework */; };
 		D08720461992ECA400D13BA5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D08720251992ECA400D13BA5 /* Foundation.framework */; };
 		D08720471992ECA400D13BA5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D08720291992ECA400D13BA5 /* UIKit.framework */; };
@@ -54,6 +53,10 @@
 		D0B7FE2319A157B900C5CF0A /* CDPerfilViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0B7FE2219A157B900C5CF0A /* CDPerfilViewController.m */; };
 		D0B7FE2619A177BA00C5CF0A /* CDAccessPackages.m in Sources */ = {isa = PBXBuildFile; fileRef = D0B7FE2519A177BA00C5CF0A /* CDAccessPackages.m */; };
 		D0B7FE3119A1808000C5CF0A /* CDPackagesListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0B7FE3019A1808000C5CF0A /* CDPackagesListViewController.m */; };
+		D0E2F6AB19A83553009AF928 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0E2F6AA19A83553009AF928 /* Images.xcassets */; };
+		D0E2F6AD19A835D9009AF928 /* app 2.png in Resources */ = {isa = PBXBuildFile; fileRef = D0E2F6AC19A835D9009AF928 /* app 2.png */; };
+		D0E2F6AF19A835E1009AF928 /* app.png in Resources */ = {isa = PBXBuildFile; fileRef = D0E2F6AE19A835E1009AF928 /* app.png */; };
+		D0E2F6B119A83638009AF928 /* app 3.png in Resources */ = {isa = PBXBuildFile; fileRef = D0E2F6B019A83638009AF928 /* app 3.png */; };
 		D0FFFBE319A00962004AC914 /* PeticionesApi.m in Sources */ = {isa = PBXBuildFile; fileRef = D0FFFBE219A00962004AC914 /* PeticionesApi.m */; };
 /* End PBXBuildFile section */
 
@@ -87,7 +90,6 @@
 		D056D26119A5C802000BE74C /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user.png; sourceTree = "<group>"; };
 		D056D26319A5C8E9000BE74C /* bill.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bill.png; sourceTree = "<group>"; };
 		D056D26519A5CBB6000BE74C /* employee.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = employee.png; sourceTree = "<group>"; };
-		D056D26719A5CF78000BE74C /* package2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = package2.png; sourceTree = "<group>"; };
 		D056D26919A5D1DA000BE74C /* CDBillingListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDBillingListViewController.h; sourceTree = "<group>"; };
 		D056D26A19A5D1DA000BE74C /* CDBillingListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDBillingListViewController.m; sourceTree = "<group>"; };
 		D056D26C19A5D4A8000BE74C /* CDBillingDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDBillingDetailsViewController.h; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 		D056D27419A5D884000BE74C /* CDCreateNewEmployeeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDCreateNewEmployeeViewController.h; sourceTree = "<group>"; };
 		D056D27519A5D884000BE74C /* CDCreateNewEmployeeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDCreateNewEmployeeViewController.m; sourceTree = "<group>"; };
 		D056D27719A5DD7F000BE74C /* empoyee3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = empoyee3.png; sourceTree = "<group>"; };
+		D058B18319A8881E000CEF36 /* package2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = package2.png; sourceTree = "<group>"; };
 		D086229F19A6C1C20016FAF5 /* CDAccessContainers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDAccessContainers.h; sourceTree = "<group>"; };
 		D08622A019A6C1C20016FAF5 /* CDAccessContainers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDAccessContainers.m; sourceTree = "<group>"; };
 		D08622A219A6C4230016FAF5 /* CDContainerRoute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDContainerRoute.h; sourceTree = "<group>"; };
@@ -113,7 +116,6 @@
 		D08720341992ECA400D13BA5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D08720351992ECA400D13BA5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		D08720381992ECA400D13BA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		D087203D1992ECA400D13BA5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D08720431992ECA400D13BA5 /* cargoDispatcherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cargoDispatcherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D08720441992ECA400D13BA5 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		D087204C1992ECA400D13BA5 /* cargoDispatcherTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "cargoDispatcherTests-Info.plist"; sourceTree = "<group>"; };
@@ -143,6 +145,10 @@
 		D0B7FE2519A177BA00C5CF0A /* CDAccessPackages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDAccessPackages.m; sourceTree = "<group>"; };
 		D0B7FE2F19A1808000C5CF0A /* CDPackagesListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDPackagesListViewController.h; sourceTree = "<group>"; };
 		D0B7FE3019A1808000C5CF0A /* CDPackagesListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDPackagesListViewController.m; sourceTree = "<group>"; };
+		D0E2F6AA19A83553009AF928 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D0E2F6AC19A835D9009AF928 /* app 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app 2.png"; sourceTree = "<group>"; };
+		D0E2F6AE19A835E1009AF928 /* app.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = app.png; sourceTree = "<group>"; };
+		D0E2F6B019A83638009AF928 /* app 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app 3.png"; sourceTree = "<group>"; };
 		D0FFFBE119A00962004AC914 /* PeticionesApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeticionesApi.h; sourceTree = "<group>"; };
 		D0FFFBE219A00962004AC914 /* PeticionesApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeticionesApi.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -174,6 +180,9 @@
 		D056D25819A5C4B3000BE74C /* Imagenes */ = {
 			isa = PBXGroup;
 			children = (
+				D058B18319A8881E000CEF36 /* package2.png */,
+				D0E2F6B019A83638009AF928 /* app 3.png */,
+				D0E2F6AC19A835D9009AF928 /* app 2.png */,
 				D056D27719A5DD7F000BE74C /* empoyee3.png */,
 				D056D26F19A5D635000BE74C /* money.png */,
 				D056D25919A5C4D9000BE74C /* camion.png */,
@@ -182,8 +191,8 @@
 				D056D25F19A5C7B1000BE74C /* package.png */,
 				D056D26119A5C802000BE74C /* user.png */,
 				D056D26319A5C8E9000BE74C /* bill.png */,
-				D056D26719A5CF78000BE74C /* package2.png */,
 				D056D26519A5CBB6000BE74C /* employee.png */,
+				D0E2F6AE19A835E1009AF928 /* app.png */,
 			);
 			name = Imagenes;
 			sourceTree = "<group>";
@@ -238,7 +247,6 @@
 				D08720341992ECA400D13BA5 /* AppDelegate.h */,
 				D08720351992ECA400D13BA5 /* AppDelegate.m */,
 				D08720371992ECA400D13BA5 /* Main.storyboard */,
-				D087203D1992ECA400D13BA5 /* Images.xcassets */,
 				D087202C1992ECA400D13BA5 /* Supporting Files */,
 			);
 			path = cargoDispatcher;
@@ -250,6 +258,7 @@
 				D08622A519A6F1570016FAF5 /* Third Party */,
 				D056D25819A5C4B3000BE74C /* Imagenes */,
 				D087202D1992ECA400D13BA5 /* cargoDispatcher-Info.plist */,
+				D0E2F6AA19A83553009AF928 /* Images.xcassets */,
 				D087202E1992ECA400D13BA5 /* InfoPlist.strings */,
 				D08720311992ECA400D13BA5 /* main.m */,
 				D08720331992ECA400D13BA5 /* cargoDispatcher-Prefix.pch */,
@@ -420,16 +429,19 @@
 			files = (
 				D056D25A19A5C4D9000BE74C /* camion.png in Resources */,
 				D056D26019A5C7B1000BE74C /* package.png in Resources */,
-				D056D26819A5CF78000BE74C /* package2.png in Resources */,
 				D056D26419A5C8E9000BE74C /* bill.png in Resources */,
 				D056D26619A5CBB6000BE74C /* employee.png in Resources */,
+				D0E2F6B119A83638009AF928 /* app 3.png in Resources */,
 				D056D26219A5C802000BE74C /* user.png in Resources */,
+				D0E2F6AF19A835E1009AF928 /* app.png in Resources */,
 				D056D25C19A5C532000BE74C /* mapa.png in Resources */,
-				D087203E1992ECA400D13BA5 /* Images.xcassets in Resources */,
 				D056D27019A5D635000BE74C /* money.png in Resources */,
 				D08720301992ECA400D13BA5 /* InfoPlist.strings in Resources */,
 				D056D25E19A5C756000BE74C /* wallet.png in Resources */,
+				D0E2F6AB19A83553009AF928 /* Images.xcassets in Resources */,
 				D08720391992ECA400D13BA5 /* Main.storyboard in Resources */,
+				D058B18419A8881E000CEF36 /* package2.png in Resources */,
+				D0E2F6AD19A835D9009AF928 /* app 2.png in Resources */,
 				D056D27819A5DD7F000BE74C /* empoyee3.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -598,7 +610,6 @@
 		D08720551992ECA400D13BA5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "cargoDispatcher/cargoDispatcher-Prefix.pch";
@@ -611,7 +622,6 @@
 		D08720561992ECA400D13BA5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "cargoDispatcher/cargoDispatcher-Prefix.pch";

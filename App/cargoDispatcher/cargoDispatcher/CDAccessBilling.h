@@ -19,6 +19,7 @@
 
 + (id)sharedManager;
 -(void)getAllCustomerBilling:(CDCustomer *)customer;
+-(void)getBillingInfo:(CDCustomer *)customer;
 
 @property CDBilling * billing;
 @property (nonatomic, weak) id <AccessBillingDelegate> accessBillingDelegate;

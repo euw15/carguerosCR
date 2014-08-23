@@ -18,6 +18,7 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *labelTipo;
 @property (weak, nonatomic) IBOutlet UILabel *labelDescripcion;
+@property (weak, nonatomic) IBOutlet UILabel *labelEstadoPaquete;
 
 @property (strong, nonatomic) CDPackage *package;
 @end

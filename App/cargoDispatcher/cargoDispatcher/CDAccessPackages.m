@@ -32,9 +32,7 @@
     //Generates URL. Check ENVIRONMENT of EnvConfig in appdelegate.
     NSURL *apiURL = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"http://cargodispatcher.elasticbeanstalk.com/api/cdpackages/UserPackages?account=%i",idUsuario.account]];
     
-    NSLog(@"%@",[NSString stringWithFormat:@"http://cargodispatcher.elasticbeanstalk.com/api/cdpackages/UserPackages?account=%i",idUsuario.account]);
-    
-	NSURLRequest *request = [PeticionesApi createAPIGetRequest:apiURL];
+   	NSURLRequest *request = [PeticionesApi createAPIGetRequest:apiURL];
     
     //Send asynchronous request **** Hacerlo sincrono y devolver un numero?
     [NSURLConnection sendAsynchronousRequest:request
@@ -57,6 +55,7 @@
     NSString *path = [NSString stringWithFormat:@"http://cargodispatcher.elasticbeanstalk.com/api/cdPackages/createPackage?weight=%i&size=%i&type=%@&price=%i&description=%@&account=%i",package.weight,package.size,package.type,package.price,package.description,idUsuario];
     NSURL *apiURL = [[NSURL alloc] initWithString:[path stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
     
+    NSLog(@"%@ aca",path);
     NSURLRequest *request =[PeticionesApi createURLRequest:apiURL withBody:@"" withMethod:@"POST"];
     //Send asynchronous request **** Hacerlo sincrono y devolver un numero?
     [NSURLConnection sendAsynchronousRequest:request

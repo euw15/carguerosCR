@@ -14,7 +14,7 @@
 
 @implementation CDDetalleViewController
 
-@synthesize labelDescripcion,labelPeso,labelFechaLlegada,labelPesoPackage,labelTipo,package;
+@synthesize labelDescripcion,labelPeso,labelFechaLlegada,labelPesoPackage,labelTipo,package,labelEstadoPaquete;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -30,10 +30,11 @@
     if([package.containerArrivalDate isEqualToString:@"-"]){labelFechaLlegada.text= @"Fecha llegada: No estimada";}
     else{ labelFechaLlegada.text= [NSString stringWithFormat:@"Fecha llegada: %@", package.containerArrivalDate];}
     
-    labelPesoPackage.text= [NSString stringWithFormat:@"Peso: %i", package.weight];
+    labelPesoPackage.text= [NSString stringWithFormat:@"Peso: %i kg", package.weight];
     labelPeso.text= [NSString stringWithFormat:@"Precio: %i", package.price];
     labelTipo.text= [NSString stringWithFormat:@"Tipo: %@", package.type];
     labelDescripcion.text = [NSString stringWithFormat:@"Descripción: %@", package.description];
+    labelEstadoPaquete.text = [NSString stringWithFormat:@"Estado: %@",package.packageState];
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }

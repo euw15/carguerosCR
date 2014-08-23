@@ -49,6 +49,30 @@
                            }];
 }
 
+-(void)getBillingInfo:(CDCustomer *)customer
+{
+    //Generates URL. Check ENVIRONMENT of EnvConfig in appdelegate.
+    NSURL *apiURL = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"http://cargodispatcher.elasticbeanstalk.com/api/cdCustomerHasPackages/packageArrive?account=1&idPackage=1"]];
+    
+    //Adds jSON Body
+	NSURLRequest *request = [PeticionesApi createAPIGetRequest:apiURL];
+    
+    //Send asynchronous request **** Hacerlo sincrono y devolver un numero?
+    [NSURLConnection sendAsynchronousRequest:request
+                                       queue:[NSOperationQueue mainQueue]
+                           completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
+                               if (error) {
+                                   NSLog(@"Error");
+                               }
+                               else {
+                                
+                                 
+                               }
+                           }];
+}
+
+
+
 
 
 @end

@@ -58,7 +58,7 @@
 
 -(void)addPropertisTextFields:(UITextField *)textTield{
     [textTield setDelegate:self];
-    [textTield setReturnKeyType:UIReturnKeyDone];
+    [textTield setReturnKeyType:UIReturnKeyDefault];
     [textTield addTarget:self
                                  action:@selector(hidekeyword)
                        forControlEvents:UIControlEventEditingDidEndOnExit];
@@ -77,10 +77,12 @@
 - (IBAction)createPackage:(id)sender
 {
     if([self.textFieldCuentaCliente.text length]!=0&&[self.textFieldTipo.text length]!=0&&[self.textFieldDescripcion.text length]!=0&&[self.textFieldTamano.text length]!=0&&[self.textFieldPeso.text length]!=0){
+   
     CDPackage *package= [[CDPackage alloc] init];
     package.weight = [textFieldPeso.text intValue];
     package.size = [textFieldTamano.text intValue];
     package.type = textFieldTipo.text;
+    package.price = [textFieldPrecio.text intValue];
     package.description = textFieldDescripcion.text;
     
     [accessPackages createPackage:package idUsuario:[textFieldCuentaCliente.text intValue]];

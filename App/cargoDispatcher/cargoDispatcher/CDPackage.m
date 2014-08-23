@@ -33,12 +33,12 @@
                     package.idPackages      = [object objectForKey:@"idPackages"];
                     package.weight  = [[object objectForKey:@"weight"] intValue];
                     package.size   = [[object objectForKey:@"size"] intValue];
-                    package.price     = [[object objectForKey:@"score"] intValue];
+                    package.price     = [[object objectForKey:@"price"] intValue];
                     package.type      = [object objectForKey:@"type"];
                     package.description = [object objectForKey:@"description"];
                     package.customerId = [[object objectForKey:@"customerId"] intValue];
                     package.packageState = [object objectForKey:@"packageState"];
-                    package.containerArrivalDate = [object objectForKey:@"containerArrivalDate"];
+                    package.containerArrivalDate = [object objectForKey:@"arrivalDate"];
                     package.container = [object objectForKey:@"container"];
                     
                     [arrayPackages addObject:package];

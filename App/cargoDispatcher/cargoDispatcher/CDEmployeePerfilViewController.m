@@ -10,7 +10,7 @@
 
 @interface CDEmployeePerfilViewController ()
 
-
+@property CDAccessBilling *accessBilling;
 
 @end
 
@@ -22,10 +22,11 @@
 
 - (void)viewDidLoad
 {
+    self.accessBilling = [CDAccessBilling sharedManager];
     self.accessContainers = [CDAccessContainers sharedManager];
     self.accessContainers.accessBillingDelegate=self;
     // Start timer and sets it to a property called saveTimer
-    timerMethod = [NSTimer scheduledTimerWithTimeInterval:2.0
+    timerMethod = [NSTimer scheduledTimerWithTimeInterval:5.0
                                                       target:self
                                                     selector:@selector(askIfContainerArrive)
                                                     userInfo:nil
@@ -38,6 +39,7 @@
 -(void)askIfContainerArrive
 {
     [self.accessContainers hasContainerArrive];
+    [self.accessBilling getBillingInfo:nil];
 }
 
 - (void)didReceiveMemoryWarning
